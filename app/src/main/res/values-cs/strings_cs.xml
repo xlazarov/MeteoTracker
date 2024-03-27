@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MeteoriteTracker</string>
+    <string name="show_map">Zobrazit na mapě</string>
+    <string name="fall">Pád</string>
+    <string name="mass">Hmotnost</string>
+    <string name="geolocation">Geolokace</string>
+    <string name="name">Název</string>
+    <string name="year">Rok</string>
+    <string name="type">Typ</string>
+    <string name="recclass">Třída</string>
+    <string name="coordinates">Souřadnice</string>
+    <string name="fell">Spadl</string>
+    <string name="found">Nalezen</string>
+    <string name="relict">Relikt</string>
+    <string name="valid">Platný</string>
+    <string name="close">Zavřít</string>
+    <string name="confirm">Potvrdit</string>
+    <string name="reset">Resetovat</string>
+    <string name="search">Hledat podle názvu</string>
+    <string name="filter">Filtr</string>
+    <string name="settings">Nastavení</string>
+    <string name="home">Domov</string>
+    <string name="about">O aplikaci</string>
+    <string name="statistics">Statistika</string>
+    <string name="meteorite_map">Mapa meteoritů</string>
+    <string name="meteorite_data">Meteoritní data</string>
+    <string name="language">Jazyk</string>
+    <string name="mode">Režim</string>
+    <string name="dashbutton_map">Prohlédněte si přistání meteoritů na interaktivní mapě</string>
+    <string name="dashbutton_data">Podívejte se na seznam všech přistání meteoritů</string>
+    <string name="dashbutton_stats">Podívejte se na statistiky přistání meteorů po celém světě</string>
+    <string name="welcome_text">Vítejte v MeteoriteTracker!\n\nVydejte se na vesmírné dobrodružství a objevte zázraky vesmíru na dosah ruky.\n\nDíky přístupu k otevřeným datům NASA vás MeteoriteTracker zve na cestu za odhalováním meteoritů, které se dotkly Země.</string>
+    <string name="longitude">Zeměpisná délka</string>
+    <string name="latitude">Zeměpisná šířka</string>
+    <string name="continent">Kontinent</string>
+    <string name="no_data">Nenalezena žádná data</string>
+    <string name="meteorite_landings">Přistání meteoritů</string>
+    <string name="year_from">Rok Od</string>
+    <string name="year_to">Rok Do</string>
+    <string name="country">Krajina</string>
+    <string name="admin_area">Správní oblast</string>
+    <string name="unknown">neznámé</string>
+    <string name="locality">Lokalita</string>
+</resources>

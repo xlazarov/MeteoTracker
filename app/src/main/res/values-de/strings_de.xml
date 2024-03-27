@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MeteoriteTracker</string>
+    <string name="show_map">Auf der Karte anzeigen</string>
+    <string name="fall">Fallen</string>
+    <string name="mass">Masse</string>
+    <string name="geolocation">Geolokalisierung</string>
+    <string name="name">Name</string>
+    <string name="year">Jahr</string>
+    <string name="type">Typ</string>
+    <string name="recclass">Klasse</string>
+    <string name="coordinates">Koordinaten</string>
+    <string name="fell">Fiel</string>
+    <string name="found">Gefunden</string>
+    <string name="relict">Relikt</string>
+    <string name="valid">Gültig</string>
+    <string name="close">Schließen</string>
+    <string name="confirm">Bestätigen</string>
+    <string name="reset">Zurücksetzen</string>
+    <string name="search">Suche mit Name</string>
+    <string name="filter">Filter</string>
+    <string name="settings">Einstellungen</string>
+    <string name="home">Heim</string>
+    <string name="about">Über</string>
+    <string name="statistics">Statistiken</string>
+    <string name="meteorite_map">Meteoritenkarte</string>
+    <string name="meteorite_data">Meteoritendaten</string>
+    <string name="language">Sprache</string>
+    <string name="mode">Modus</string>
+    <string name="dashbutton_map">Sehen Sie sich Meteoritenlandungen auf einer interaktiven Karte an</string>
+    <string name="dashbutton_data">Sehen Sie sich eine Liste aller Meteoritenlandungen an</string>
+    <string name="dashbutton_stats">Schauen Sie sich Statistiken zu Meteorlandungen auf der ganzen Welt an</string>
+    <string name="welcome_text">Willkommen bei MeteoriteTracker!\n\nBegeben Sie sich auf ein kosmisches Abenteuer und entdecken Sie die Wunder des Universums zum Greifen nah.\n\nMit Zugriff auf die offenen Daten der NASA lädt MeteoriteTracker Sie auf eine Reise zur Entdeckung der Meteoriten ein, die Erde berührt haben.</string>
+    <string name="longitude">Längengrad</string>
+    <string name="latitude">Breite</string>
+    <string name="continent">Kontinent</string>
+    <string name="no_data">Keine Daten gefunden</string>
+    <string name="meteorite_landings">Meteoritenlandungen</string>
+    <string name="year_from">Jahr von</string>
+    <string name="year_to">Jahr bis</string>
+    <string name="country">Land</string>
+    <string name="admin_area">Verwaltungsbereich</string>
+    <string name="unknown">Unbekannt</string>
+    <string name="locality">Ort</string>
+</resources>
