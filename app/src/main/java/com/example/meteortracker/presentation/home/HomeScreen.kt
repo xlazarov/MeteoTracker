@@ -27,7 +27,7 @@ import com.example.meteortracker.util.ThemeManager
 fun HomeScreen(navController: NavController) {
     val isDarkTheme = ThemeManager.get(LocalContext.current)
     val heroImage by rememberUpdatedState(newValue =
-    if (isDarkTheme) R.drawable.hero3 else R.drawable.hero_light)
+    if (isDarkTheme) R.drawable.hero_dark2 else R.drawable.hero_light1)
 
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
