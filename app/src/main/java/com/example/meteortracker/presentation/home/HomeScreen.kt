@@ -26,8 +26,10 @@ import com.example.meteortracker.util.ThemeManager
 @Composable
 fun HomeScreen(navController: NavController) {
     val isDarkTheme = ThemeManager.get(LocalContext.current)
-    val heroImage by rememberUpdatedState(newValue =
-    if (isDarkTheme) R.drawable.hero_dark2 else R.drawable.hero_light1)
+    val heroImage by rememberUpdatedState(
+        newValue =
+        if (isDarkTheme) R.drawable.hero_dark2 else R.drawable.hero_light1
+    )
 
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
@@ -45,8 +47,11 @@ fun HomeScreen(navController: NavController) {
         ) {
             WelcomeText()
             Column(
-                modifier = Modifier.fillMaxSize(),
-                verticalArrangement = Arrangement.SpaceEvenly) {
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(horizontal = 16.dp),
+                verticalArrangement = Arrangement.SpaceEvenly
+            ) {
                 DashboardButton(
                     title = stringResource(id = R.string.meteorite_map),
                     description = stringResource(id = R.string.dashbutton_map),
