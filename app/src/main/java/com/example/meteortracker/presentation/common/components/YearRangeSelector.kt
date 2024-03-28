@@ -6,10 +6,9 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
@@ -76,13 +75,8 @@ fun YearRangeSelector(
             )
         )
         Spacer(modifier = Modifier.width(16.dp))
-        TextButton(
-            colors = ButtonDefaults.textButtonColors(
-                containerColor = colorScheme.primary,
-                contentColor = Color.White
-            ),
-            onClick = { onClick(yearFrom, yearTo) },
-            modifier = Modifier.weight(0.3f)
+        Button(
+            onClick = { onClick(yearFrom, yearTo) }
         ) {
             Text(stringResource(id = R.string.confirm))
         }

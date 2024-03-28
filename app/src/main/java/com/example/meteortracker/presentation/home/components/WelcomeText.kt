@@ -20,7 +20,7 @@ fun WelcomeText(modifier: Modifier = Modifier) {
         Column(modifier = Modifier.padding(vertical = 16.dp, horizontal = 24.dp)) {
             Text(
                 text = "MeteoTracker",
-                style = typography.headlineLarge,
+                style = typography.titleLarge,
                 color = colorScheme.surfaceTint
             )
             Spacer(modifier = Modifier.height(8.dp))

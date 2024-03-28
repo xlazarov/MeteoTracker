@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
@@ -28,6 +29,7 @@ fun PieChart(
     viewModel: MeteoriteChartViewModel = hiltViewModel(),
     dataLabel: String,
     descriptionText: String,
+    color: Color = colorScheme.onBackground,
     modifier: Modifier = Modifier,
 ) {
     val chartData by viewModel.chartData.observeAsState(emptyList())
@@ -58,6 +60,7 @@ fun PieChart(
                     isEnabled = true
                     form = Legend.LegendForm.CIRCLE
                     textSize = 12f
+                    textColor = color.toArgb()
                     verticalAlignment = Legend.LegendVerticalAlignment.BOTTOM
                     horizontalAlignment = Legend.LegendHorizontalAlignment.CENTER
                     orientation = Legend.LegendOrientation.HORIZONTAL
@@ -65,12 +68,15 @@ fun PieChart(
                     isWordWrapEnabled = true
                 }
 
-                description.isEnabled = true
-                description.text = descriptionText
+                description.apply {
+                    isEnabled = true
+                    text = descriptionText
+                    textColor = color.toArgb()
+                }
+
                 isDrawHoleEnabled = false
                 setDrawEntryLabels(false)
                 setUsePercentValues(true)
-
                 setTouchEnabled(true)
 
                 invalidate()

@@ -19,6 +19,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.example.meteortracker.ui.theme.nasa_url_color
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -44,7 +45,7 @@ fun TopAppBar(
             Text(
                 text = "DATA.NASA.GOV",
                 style = typography.titleSmall,
-                color = colorScheme.primaryContainer,
+                color = nasa_url_color,
                 fontWeight = FontWeight.SemiBold
             )
         }
