@@ -33,7 +33,7 @@ fun DashboardButton(
         Column(modifier = Modifier.padding(8.dp)) {
             Text(
                 text = title,
-                style = MaterialTheme.typography.titleLarge
+                style = MaterialTheme.typography.titleMedium
             )
             Spacer(modifier = Modifier.height(8.dp))
             Text(

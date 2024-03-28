@@ -5,7 +5,8 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Card
-import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MaterialTheme.colorScheme
+import androidx.compose.material3.MaterialTheme.typography
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -19,12 +20,13 @@ fun WelcomeText(modifier: Modifier = Modifier) {
         Column(modifier = Modifier.padding(vertical = 16.dp, horizontal = 24.dp)) {
             Text(
                 text = "MeteoTracker",
-                style = MaterialTheme.typography.headlineLarge
+                style = typography.headlineLarge,
+                color = colorScheme.surfaceTint
             )
             Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = stringResource(id = R.string.welcome_text),
-                style = MaterialTheme.typography.bodyLarge
+                style = typography.bodyLarge
             )
         }
     }

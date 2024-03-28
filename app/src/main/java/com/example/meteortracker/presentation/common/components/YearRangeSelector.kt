@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -83,7 +82,7 @@ fun YearRangeSelector(
                 contentColor = Color.White
             ),
             onClick = { onClick(yearFrom, yearTo) },
-            modifier = Modifier.weight(0.2f)
+            modifier = Modifier.weight(0.3f)
         ) {
             Text(stringResource(id = R.string.confirm))
         }
