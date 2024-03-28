@@ -50,10 +50,10 @@ fun SearchBar(
             value = text,
             onValueChange = { text = it },
             keyboardOptions = KeyboardOptions.Default.copy(
-                imeAction = ImeAction.Search
+                imeAction = ImeAction.Done
             ),
             keyboardActions = KeyboardActions(
-                onSearch = {
+                onDone = {
                     viewModel.setFilter(filter.copy(nameQuery = text))
                     viewModel.fetchByFilter()
                 }
@@ -88,7 +88,7 @@ fun SearchBar(
             ),
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 16.dp)
+                .padding(horizontal = 24.dp)
         )
     }
 }

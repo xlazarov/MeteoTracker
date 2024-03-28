@@ -44,7 +44,7 @@ fun DataListScreen(
         LazyColumn(
             state = listState,
             contentPadding = PaddingValues(bottom = 8.dp),
-            modifier = Modifier.padding(horizontal = 16.dp),
+            modifier = Modifier.padding(horizontal = 24.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             flingBehavior = rememberSnapFlingBehavior(lazyListState = listState)
         ) {
@@ -63,19 +63,27 @@ fun DataListScreen(
                     }
                 }
             }
-            if (meteorites.isEmpty()) {
+            if (isLoading) {
                 item {
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(16.dp),
+                            .padding(24.dp),
                         contentAlignment = Alignment.Center
                     ) {
-                        if (isLoading) {
-                            CircularProgressIndicator()
-                        } else {
-                            Text(text = stringResource(id = R.string.no_data))
-                        }
+                        CircularProgressIndicator()
+                    }
+                }
+            }
+            if (meteorites.isEmpty() && !isLoading) {
+                item {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(24.dp),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(text = stringResource(id = R.string.no_data))
                     }
                 }
             }

@@ -20,7 +20,7 @@ fun AboutScreen(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
             .fillMaxSize()
-            .padding(16.dp),
+            .padding(24.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         Text(text = "About Meteorite Tracker", style = typography.titleLarge)

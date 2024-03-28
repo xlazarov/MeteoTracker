@@ -17,8 +17,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.example.meteortracker.ui.theme.nasa_url_color
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -35,11 +35,17 @@ fun TopAppBar(
         contentAlignment = Alignment.Center
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            Text(text = "MeteoriteTracker", style = typography.titleLarge)
+            Text(
+                text = "MeteoTracker",
+                style = typography.titleLarge,
+                color = colorScheme.onPrimary,
+                fontWeight = FontWeight.Normal
+            )
             Text(
                 text = "DATA.NASA.GOV",
                 style = typography.titleSmall,
-                color = nasa_url_color
+                color = colorScheme.primaryContainer,
+                fontWeight = FontWeight.SemiBold
             )
         }
         IconButton(
@@ -49,7 +55,8 @@ fun TopAppBar(
             Icon(
                 imageVector = Icons.Rounded.Menu,
                 contentDescription = null,
-                modifier = Modifier.size(28.dp)
+                modifier = Modifier.size(28.dp),
+                tint = colorScheme.onPrimary
             )
         }
     }
