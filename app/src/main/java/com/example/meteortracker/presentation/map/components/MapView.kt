@@ -41,6 +41,7 @@ fun MapView(
             setTileSource(TileSourceFactory.MAPNIK)
             setMultiTouchControls(true)
             setScrollableAreaLimitDouble(worldMapBounds)
+            minZoomLevel = 1.0
             controller.setZoom(if (meteorites.size == 1) 6.0 else 3.0)
             controller.setCenter(
                 if (meteorites.size == 1) GeoPoint(meteorites[0].reclat, meteorites[0].reclong)
