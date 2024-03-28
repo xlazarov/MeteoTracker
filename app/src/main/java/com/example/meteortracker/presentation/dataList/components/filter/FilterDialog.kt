@@ -3,6 +3,7 @@ package com.example.meteortracker.presentation.dataList.components.filter
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.twotone.RestartAlt
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme.colorScheme
@@ -14,7 +15,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.meteortracker.R
@@ -33,8 +33,7 @@ fun FilterDialog(
         title = {
             Text(
                 stringResource(id = R.string.filter),
-                style = typography.titleLarge,
-                color = colorScheme.tertiary
+                style = typography.titleLarge
             )
         },
         text = {
@@ -44,16 +43,12 @@ fun FilterDialog(
             )
         },
         confirmButton = {
-            TextButton(
+            Button(
                 onClick = {
                     onDismissRequest()
                     viewModel.setFilter(filter)
                     viewModel.fetchByFilter()
-                },
-                colors = ButtonDefaults.textButtonColors(
-                    containerColor = colorScheme.primary,
-                    contentColor = Color.White
-                )
+                }
             ) {
                 Text(stringResource(id = R.string.confirm))
             }

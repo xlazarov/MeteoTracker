@@ -42,7 +42,7 @@ fun YearRangeSelector(
 
     Row(
         modifier = modifier
-            .background(colorScheme.primaryContainer)
+            .background(colorScheme.secondaryContainer)
             .padding(horizontal = 16.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
