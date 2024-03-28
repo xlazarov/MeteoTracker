@@ -72,7 +72,7 @@ fun FilterDialog(
             TextButton(
                 onClick = {
                     viewModel.clearFilter()
-                    filter = MeteoriteFilter()
+                    onDismissRequest()
                 },
                 content = {
                     Icon(imageVector = Icons.TwoTone.RestartAlt, contentDescription = null)
