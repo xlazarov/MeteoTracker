@@ -21,7 +21,7 @@ import com.example.meteortracker.presentation.AboutScreen
 import com.example.meteortracker.presentation.common.components.navigation.Screen
 import com.example.meteortracker.presentation.dataList.DataListScreen
 import com.example.meteortracker.presentation.home.HomeScreen
-import com.example.meteortracker.presentation.map.MeteorMap
+import com.example.meteortracker.presentation.map.MapScreen
 import com.example.meteortracker.presentation.settings.SettingsScreen
 import com.example.meteortracker.presentation.statistics.ChartScreen
 import com.example.meteortracker.presentation.statistics.StatisticsScreen
@@ -84,17 +84,27 @@ fun Screen.getName() = when (this) {
 @Composable
 fun ScreenContent(screen: Screen, navController: NavController) = when (screen) {
     Screen.Home -> HomeScreen(navController)
-    Screen.MeteoriteMap -> MeteorMap()
+    Screen.MeteoriteMap -> MapScreen()
     Screen.Meteorites -> DataListScreen()
     Screen.Statistics -> StatisticsScreen(navController)
     Screen.PieChart -> ChartScreen(
-        dataType = "recclass",
-        content = { PieChart(dataLabel = stringResource(id = R.string.recclass)) }
+        data = "recclass",
+        content = {
+            PieChart(
+                dataLabel = stringResource(id = R.string.recclass),
+                descriptionText = stringResource(id = R.string.per_class)
+            )
+        }
     )
 
     Screen.LineChart -> ChartScreen(
-        dataType = "year",
-        content = { LineChart(dataLabel = stringResource(id = R.string.meteorite_landings)) }
+        data = "year",
+        content = {
+            LineChart(
+                dataLabel = stringResource(id = R.string.year),
+                descriptionText = stringResource(id = R.string.meteorite_landings)
+            )
+        }
     )
 
     Screen.Settings -> SettingsScreen()
