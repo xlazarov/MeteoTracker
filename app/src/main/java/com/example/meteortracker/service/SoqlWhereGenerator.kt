@@ -5,10 +5,6 @@ import com.example.meteortracker.data.MeteoriteFilter
 fun getWhereQuery(filter: MeteoriteFilter): String {
     val queryParts = mutableListOf<String>()
 
-    filter.year?.let {
-        queryParts.add("year = '$it-01-01T00:00:00.000'")
-    }
-
     filter.yearFrom?.let {
         queryParts.add("year >= '$it-01-01T00:00:00.000'")
     }
