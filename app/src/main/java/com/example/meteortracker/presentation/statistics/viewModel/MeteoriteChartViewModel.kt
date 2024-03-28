@@ -35,10 +35,6 @@ class MeteoriteChartViewModel @Inject constructor(
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
 
-    init {
-        _filter.value = MeteoriteFilter()
-    }
-
     private fun fetchChartData() {
         _isLoading.value = true
         viewModelScope.launch {
@@ -48,12 +44,18 @@ class MeteoriteChartViewModel @Inject constructor(
 
             val response = nasaApi.fetchChartData(token, select, where, group)
 
-            Log.i("ChartVM", "\$select=$select&\$where=$where&\$group=$group\n${response.raw()}\n${response.body()?.size}")
+            Log.i(
+                "ChartVM",
+                "\$select=$select&\$where=$where&\$group=$group\n${response.raw()}\n${response.body()?.size}"
+            )
 
             if (response.isSuccessful && response.body() != null) {
                 _chartData.value = response.body()
 
-                Log.i("ChartVM", "Fetched chart data: \n${response.raw()}\n${response.body()?.size}")
+                Log.i(
+                    "ChartVM",
+                    "Fetched chart data: \n${response.raw()}\n${response.body()?.size}"
+                )
             } else {
                 Log.e("ChartVM", "Error fetching chart data: ${response.errorBody()}")
             }

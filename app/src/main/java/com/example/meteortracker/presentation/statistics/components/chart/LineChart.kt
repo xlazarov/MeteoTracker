@@ -2,6 +2,7 @@ package com.example.meteortracker.presentation.statistics.components.chart
 
 import android.view.ContextThemeWrapper
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -9,6 +10,7 @@ import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.meteortracker.R
@@ -23,6 +25,7 @@ import com.github.mikephil.charting.data.LineDataSet
 fun LineChart(
     viewModel: MeteoriteChartViewModel = hiltViewModel(),
     dataLabel: String,
+    descriptionText: String,
     modifier: Modifier = Modifier,
     lineColor: Color = colorScheme.tertiary,
     colorFill: Color = colorScheme.tertiary,
@@ -31,7 +34,9 @@ fun LineChart(
     val chartData by viewModel.chartData.observeAsState(emptyList())
 
     AndroidView(
-        modifier = modifier.fillMaxSize(),
+        modifier = modifier
+            .fillMaxSize()
+            .padding(16.dp),
         factory = { context ->
             val chart = LineChart(ContextThemeWrapper(context, R.style.Theme_MeteorTracker)).apply {
                 val entries: List<Entry> = chartData
@@ -56,6 +61,7 @@ fun LineChart(
                 isDragXEnabled = true
 
                 description.isEnabled = true
+                description.text = descriptionText
                 legend.isEnabled = true
 
                 axisLeft.textColor = axisTextColor.toArgb()
