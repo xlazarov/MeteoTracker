@@ -8,7 +8,7 @@
     <string name="name">Název</string>
     <string name="year">Rok</string>
     <string name="type">Typ</string>
-    <string name="recclass">Třída</string>
+    <string name="recclass">Klasifikace</string>
     <string name="coordinates">Souřadnice</string>
     <string name="fell">Spadl</string>
     <string name="found">Nalezen</string>
@@ -42,4 +42,5 @@
     <string name="admin_area">Správní oblast</string>
     <string name="unknown">neznámé</string>
     <string name="locality">Lokalita</string>
+    <string name="per_class">Přistání meteoritů podle klasifikace</string>
 </resources>

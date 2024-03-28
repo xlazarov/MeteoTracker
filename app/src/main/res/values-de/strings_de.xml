@@ -8,7 +8,7 @@
     <string name="name">Name</string>
     <string name="year">Jahr</string>
     <string name="type">Typ</string>
-    <string name="recclass">Klasse</string>
+    <string name="recclass">Einstufung</string>
     <string name="coordinates">Koordinaten</string>
     <string name="fell">Fiel</string>
     <string name="found">Gefunden</string>
@@ -42,4 +42,5 @@
     <string name="admin_area">Verwaltungsbereich</string>
     <string name="unknown">Unbekannt</string>
     <string name="locality">Ort</string>
+    <string name="per_class">Meteoritenlandungen pro Klassifizierung</string>
 </resources>

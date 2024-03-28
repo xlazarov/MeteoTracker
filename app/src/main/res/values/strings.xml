@@ -7,7 +7,7 @@
     <string name="name">Name</string>
     <string name="year">Year</string>
     <string name="type">Type</string>
-    <string name="recclass">Class</string>
+    <string name="recclass">Classification</string>
     <string name="coordinates">Coordinates</string>
     <string name="fell">Fell</string>
     <string name="found">Found</string>
@@ -41,4 +41,5 @@
     <string name="admin_area">Administrative area</string>
     <string name="unknown">unknown</string>
     <string name="locality">Locality</string>
+    <string name="per_class">Meteorite Landings per Classification</string>
 </resources>
