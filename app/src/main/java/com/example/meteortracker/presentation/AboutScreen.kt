@@ -50,6 +50,10 @@ fun AboutScreen(modifier: Modifier = Modifier) {
             text = "NASA Open Data API (Socrata)",
             url = "https://dev.socrata.com/foundry/data.nasa.gov/y77d-th95"
         )
+        LinkText(
+            text = "NASA Image and Video Library",
+            url = "https://images.nasa.gov"
+        )
         Text(
             text = "Legal and Privacy Information",
             style = typography.titleMedium
