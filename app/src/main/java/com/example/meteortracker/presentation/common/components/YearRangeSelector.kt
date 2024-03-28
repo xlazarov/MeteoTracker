@@ -1,15 +1,18 @@
-package com.example.meteortracker.presentation.statistics.components
+package com.example.meteortracker.presentation.common.components
 
-import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme.colorScheme
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material3.TextField
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
@@ -31,7 +34,7 @@ import com.example.meteortracker.presentation.statistics.viewModel.MeteoriteChar
 @Composable
 fun YearRangeSelector(
     viewModel: MeteoriteChartViewModel = hiltViewModel(),
-    data: String,
+    onClick: (String, String) -> Unit,
     modifier: Modifier = Modifier
 ) {
     val filter by viewModel.filter.observeAsState(MeteoriteFilter())
@@ -40,11 +43,12 @@ fun YearRangeSelector(
     var yearTo by remember { mutableStateOf(filter.yearTo ?: "") }
 
     Row(
-        modifier = modifier,
-        horizontalArrangement = Arrangement.spacedBy(16.dp),
-        verticalAlignment = Alignment.Bottom
+        modifier = modifier
+            .background(colorScheme.primaryContainer)
+            .padding(horizontal = 16.dp),
+        verticalAlignment = Alignment.CenterVertically
     ) {
-        OutlinedTextField(
+        TextField(
             value = yearFrom,
             onValueChange = { yearFrom = it },
             label = { Text(stringResource(id = R.string.year_from)) },
@@ -53,12 +57,12 @@ fun YearRangeSelector(
                 imeAction = ImeAction.Done
             ),
             modifier = Modifier.weight(0.4f),
-            colors = OutlinedTextFieldDefaults.colors(
-                focusedContainerColor = colorScheme.background,
-                unfocusedContainerColor = colorScheme.background
+            colors = TextFieldDefaults.colors(
+                focusedContainerColor = Color.Transparent,
+                unfocusedContainerColor = Color.Transparent
             )
         )
-        OutlinedTextField(
+        TextField(
             value = yearTo,
             onValueChange = { yearTo = it },
             label = { Text(stringResource(id = R.string.year_to)) },
@@ -67,29 +71,20 @@ fun YearRangeSelector(
                 imeAction = ImeAction.Done
             ),
             modifier = Modifier.weight(0.4f),
-            colors = OutlinedTextFieldDefaults.colors(
-                focusedContainerColor = colorScheme.background,
-                unfocusedContainerColor = colorScheme.background
+            colors = TextFieldDefaults.colors(
+                focusedContainerColor = Color.Transparent,
+                unfocusedContainerColor = Color.Transparent
             )
         )
+        Spacer(modifier = Modifier.width(16.dp))
         TextButton(
             colors = ButtonDefaults.textButtonColors(
                 containerColor = colorScheme.primary,
                 contentColor = Color.White
             ),
-            shape = OutlinedTextFieldDefaults.shape,
-            onClick = {
-                viewModel.chartSetup(
-                    filter = MeteoriteFilter(
-                        yearFrom = yearFrom.ifBlank { null },
-                        yearTo = yearTo.ifBlank { null }
-                    ),
-                    data = data
-                )
-            },
-            modifier = Modifier
-                .weight(0.3f)
-                .height(56.dp)
+            shape = CardDefaults.shape,
+            onClick = { onClick(yearFrom, yearTo) },
+            modifier = Modifier.weight(0.3f)
         ) {
             Text(stringResource(id = R.string.confirm))
         }
