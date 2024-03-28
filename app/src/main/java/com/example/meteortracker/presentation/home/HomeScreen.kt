@@ -4,9 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -42,31 +40,36 @@ fun HomeScreen(navController: NavController) {
             modifier = Modifier
                 .fillMaxSize()
                 .padding(24.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.SpaceBetween
         ) {
             WelcomeText()
-            Spacer(modifier = Modifier.height(48.dp))
-            Column(verticalArrangement = Arrangement.spacedBy(24.dp)) {
+            Column(
+                modifier = Modifier.fillMaxSize(),
+                verticalArrangement = Arrangement.SpaceEvenly) {
                 DashboardButton(
                     title = stringResource(id = R.string.meteorite_map),
                     description = stringResource(id = R.string.dashbutton_map),
                     onClick = {
                         navController.navigate(Screen.MeteoriteMap.name)
-                    }
+                    },
+                    modifier = Modifier.align(Alignment.Start)
                 )
                 DashboardButton(
                     title = stringResource(id = R.string.meteorite_data),
                     description = stringResource(id = R.string.dashbutton_data),
                     onClick = {
                         navController.navigate(Screen.Meteorites.name)
-                    }
+                    },
+                    modifier = Modifier.align(Alignment.End)
                 )
                 DashboardButton(
                     title = stringResource(id = R.string.statistics),
                     description = stringResource(id = R.string.dashbutton_stats),
                     onClick = {
                         navController.navigate(Screen.Statistics.name)
-                    }
+                    },
+                    modifier = Modifier.align(Alignment.Start)
                 )
             }
         }
