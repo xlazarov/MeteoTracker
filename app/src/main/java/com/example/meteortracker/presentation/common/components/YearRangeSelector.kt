@@ -82,9 +82,8 @@ fun YearRangeSelector(
                 containerColor = colorScheme.primary,
                 contentColor = Color.White
             ),
-            shape = CardDefaults.shape,
             onClick = { onClick(yearFrom, yearTo) },
-            modifier = Modifier.weight(0.3f)
+            modifier = Modifier.weight(0.2f)
         ) {
             Text(stringResource(id = R.string.confirm))
         }
