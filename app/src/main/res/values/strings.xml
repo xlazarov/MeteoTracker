@@ -29,7 +29,7 @@
     <string name="dashbutton_map">View meteorite landings on an interactive map</string>
     <string name="dashbutton_data">View a list of all meteorite landings</string>
     <string name="dashbutton_stats">Check out statistics of meteor landings around the world</string>
-    <string name="welcome_text">Welcome to MeteoTracker!\n\nEmbark on a cosmic adventure and discover the wonders of the universe at your fingertips.\n\nWith access to NASA\'s open data, MeteorTracker invites you on a journey of uncovering the meteors that have touched the Earth.</string>
+    <string name="welcome_text">Welcome to MeteoTracker!\n\nEmbark on a cosmic adventure and discover the wonders of the universe at your fingertips.\n\nWith access to NASA\'s open data, MeteoTracker invites you on a journey of uncovering the meteors that have touched the Earth.</string>
     <string name="longitude">Longitude</string>
     <string name="latitude">Latitude</string>
     <string name="continent">Continent</string>
