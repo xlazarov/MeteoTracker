@@ -10,20 +10,19 @@ import androidx.compose.material3.MaterialTheme.typography
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.example.meteortracker.R
 
 @Composable
 fun WelcomeText(modifier: Modifier = Modifier) {
-    Card(modifier = modifier) {
+    Card(modifier = modifier, shape = RectangleShape) {
         Column(modifier = Modifier.padding(vertical = 16.dp, horizontal = 24.dp)) {
             Text(
                 text = "MeteoTracker",
                 style = typography.titleLarge,
-                color = colorScheme.surfaceTint,
-                fontWeight = FontWeight.SemiBold
+                color = colorScheme.surfaceTint
             )
             Spacer(modifier = Modifier.height(8.dp))
             Text(
