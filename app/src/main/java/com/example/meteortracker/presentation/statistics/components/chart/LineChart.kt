@@ -24,8 +24,8 @@ import com.github.mikephil.charting.data.LineDataSet
 @Composable
 fun LineChart(
     viewModel: MeteoriteChartViewModel = hiltViewModel(),
-    dataLabel: String,
-    descriptionText: String,
+    dataName: String,
+    chartName: String,
     modifier: Modifier = Modifier,
     lineColor: Color = colorScheme.tertiary,
     colorFill: Color = colorScheme.tertiary,
@@ -44,7 +44,7 @@ fun LineChart(
                     .sortedBy { it.data.toFloat() }
                     .map { Entry(it.data.toFloat(), it.count.toFloat()) }
 
-                val dataSet = LineDataSet(entries, dataLabel).apply {
+                val dataSet = LineDataSet(entries, chartName).apply {
                     color = lineColor.toArgb()
                     setDrawValues(true)
                     setDrawCircles(true)
@@ -61,7 +61,7 @@ fun LineChart(
                 isDragXEnabled = true
 
                 description.isEnabled = true
-                description.text = descriptionText
+                description.text = dataName
                 legend.isEnabled = true
 
                 axisLeft.textColor = axisTextColor.toArgb()

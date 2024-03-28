@@ -23,9 +23,10 @@ fun ChartScreen(
     viewModel: MeteoriteChartViewModel = hiltViewModel()
 ) {
     val isLoading by viewModel.isLoading.observeAsState(false)
+    val filter by viewModel.filter.observeAsState(MeteoriteFilter())
 
     viewModel.chartSetup(
-        filter = MeteoriteFilter(yearFrom = "1900", yearTo = "2000"),
+        filter = MeteoriteFilter(yearFrom = "2000", yearTo = "2024"),
         data = data
     )
     Column(
@@ -34,6 +35,7 @@ fun ChartScreen(
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         YearRangeSelector(
+            filter = filter,
             onClick = { yearFrom, yearTo ->
                 viewModel.chartSetup(
                     filter = MeteoriteFilter(

@@ -31,7 +31,7 @@ class MeteoriteMapViewModel @Inject constructor(
     val isLoading: LiveData<Boolean> = _isLoading
 
     init {
-        _filter.value = MeteoriteFilter(yearFrom = "2010", yearTo = "2024")
+        _filter.value = MeteoriteFilter(yearFrom = "2000", yearTo = "2024")
         fetchMapData()
     }
 

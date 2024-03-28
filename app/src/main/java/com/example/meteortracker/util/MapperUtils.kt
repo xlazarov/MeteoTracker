@@ -91,8 +91,8 @@ fun ScreenContent(screen: Screen, navController: NavController) = when (screen) 
         data = "recclass",
         content = {
             PieChart(
-                dataLabel = stringResource(id = R.string.recclass),
-                descriptionText = stringResource(id = R.string.per_class)
+                dataName = stringResource(id = R.string.recclass),
+                chartName = stringResource(id = R.string.per_class)
             )
         }
     )
@@ -101,8 +101,8 @@ fun ScreenContent(screen: Screen, navController: NavController) = when (screen) 
         data = "year",
         content = {
             LineChart(
-                dataLabel = stringResource(id = R.string.year),
-                descriptionText = stringResource(id = R.string.meteorite_landings)
+                dataName = stringResource(id = R.string.year),
+                chartName = stringResource(id = R.string.meteorite_landings)
             )
         }
     )

@@ -27,8 +27,8 @@ import java.util.Random
 @Composable
 fun PieChart(
     viewModel: MeteoriteChartViewModel = hiltViewModel(),
-    dataLabel: String,
-    descriptionText: String,
+    chartName: String,
+    dataName: String,
     color: Color = colorScheme.onBackground,
     modifier: Modifier = Modifier,
 ) {
@@ -47,7 +47,7 @@ fun PieChart(
                     .reversed()
                     .subList(0, maxEntrySize)
 
-                val dataSet = PieDataSet(entries, dataLabel).apply {
+                val dataSet = PieDataSet(entries, chartName).apply {
                     colors = generateRandomColorList(entries.size)
                 }
                 data = PieData(dataSet)
@@ -70,13 +70,13 @@ fun PieChart(
 
                 description.apply {
                     isEnabled = true
-                    text = descriptionText
+                    text = dataName
                     textColor = color.toArgb()
                 }
 
                 isDrawHoleEnabled = false
                 setDrawEntryLabels(false)
-                setUsePercentValues(true)
+                setUsePercentValues(false)
                 setTouchEnabled(true)
 
                 invalidate()

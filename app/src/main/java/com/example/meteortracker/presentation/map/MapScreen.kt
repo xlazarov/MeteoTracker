@@ -18,8 +18,11 @@ import com.example.meteortracker.presentation.map.viewModel.MeteoriteMapViewMode
 fun MapScreen(
     viewModel: MeteoriteMapViewModel = hiltViewModel()
 ) {
+    val filter by viewModel.filter.observeAsState(MeteoriteFilter())
     val isLoading by viewModel.isLoading.observeAsState(false)
     val meteorites by viewModel.mapData.observeAsState(emptyList())
+
+    viewModel.setFilter(MeteoriteFilter(yearFrom = "2010", yearTo = "2024"),)
 
     Box(
         modifier = Modifier.fillMaxSize(),
@@ -31,6 +34,7 @@ fun MapScreen(
             MapView(meteorites = meteorites, modifier = Modifier.fillMaxSize())
         }
         YearRangeSelector(
+            filter = filter,
             onClick = { yearFrom, yearTo ->
                 viewModel.setFilter(
                     MeteoriteFilter(
