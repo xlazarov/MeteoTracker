@@ -30,7 +30,7 @@
     <string name="dashbutton_map">Prohlédněte si přistání meteoritů na interaktivní mapě</string>
     <string name="dashbutton_data">Podívejte se na seznam všech přistání meteoritů</string>
     <string name="dashbutton_stats">Podívejte se na statistiky přistání meteorů po celém světě</string>
-    <string name="welcome_text">Vítejte v MeteoriteTracker!\n\nVydejte se na vesmírné dobrodružství a objevte zázraky vesmíru na dosah ruky.\n\nDíky přístupu k otevřeným datům NASA vás MeteoriteTracker zve na cestu za odhalováním meteoritů, které se dotkly Země.</string>
+    <string name="welcome_text">Vítejte v MeteoTracker!\n\nVydejte se na vesmírné dobrodružství a objevte zázraky vesmíru na dosah ruky.\n\nDíky přístupu k otevřeným datům NASA vás MeteoriteTracker zve na cestu za odhalováním meteoritů, které se dotkly Země.</string>
     <string name="longitude">Zeměpisná délka</string>
     <string name="latitude">Zeměpisná šířka</string>
     <string name="continent">Kontinent</string>
