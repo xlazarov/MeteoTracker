@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            val isDarkTheme = ThemeManager.get(this)
+            val isDarkTheme = ThemeManager.getTheme(this)
 
             MeteorTrackerTheme(darkTheme = isDarkTheme) {
                 Surface(

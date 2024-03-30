@@ -22,8 +22,6 @@ fun MapScreen(
     val isLoading by viewModel.isLoading.observeAsState(false)
     val meteorites by viewModel.mapData.observeAsState(emptyList())
 
-    viewModel.setFilter(MeteoriteFilter(yearFrom = "2010", yearTo = "2024"),)
-
     Box(
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center

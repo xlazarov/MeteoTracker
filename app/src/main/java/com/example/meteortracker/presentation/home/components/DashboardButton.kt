@@ -37,8 +37,8 @@ fun DashboardButton(
             Text(
                 text = description,
                 style = typography.bodyMedium,
-                color = colorScheme.inversePrimary,
-                fontWeight = FontWeight.Medium
+                fontWeight = FontWeight.Medium,
+                color = colorScheme.secondaryContainer
             )
         }
     }
