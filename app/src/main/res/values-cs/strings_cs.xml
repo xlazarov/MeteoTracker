@@ -43,4 +43,5 @@
     <string name="unknown">neznámé</string>
     <string name="locality">Lokalita</string>
     <string name="per_class">Přistání meteoritů podle klasifikace</string>
+    <string name="home_background">Pozadí domovské obrazovky</string>
 </resources>

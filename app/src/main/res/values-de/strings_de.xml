@@ -43,4 +43,5 @@
     <string name="unknown">Unbekannt</string>
     <string name="locality">Ort</string>
     <string name="per_class">Meteoritenlandungen pro Klassifizierung</string>
+    <string name="home_background">Hintergrund des Startbildschirms</string>
 </resources>
