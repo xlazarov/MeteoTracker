@@ -34,7 +34,6 @@ class MeteoriteListViewModel @Inject constructor(
 
     init {
         fetchDataList()
-        _filter.value = MeteoriteFilter()
     }
 
     fun fetchDataList() {
@@ -66,8 +65,10 @@ class MeteoriteListViewModel @Inject constructor(
         fetchDataList()
     }
 
-    fun setFilter(filter: MeteoriteFilter) {
-        _filter.value = filter
+    fun setFilter(newFilter: MeteoriteFilter) {
+        if (_filter.value != newFilter) {
+            _filter.value = newFilter
+        }
     }
 
     fun clearFilter() {

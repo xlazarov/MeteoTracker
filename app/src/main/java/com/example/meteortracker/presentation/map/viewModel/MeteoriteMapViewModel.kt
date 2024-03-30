@@ -31,8 +31,7 @@ class MeteoriteMapViewModel @Inject constructor(
     val isLoading: LiveData<Boolean> = _isLoading
 
     init {
-        _filter.value = MeteoriteFilter(yearFrom = "2000", yearTo = "2024")
-        fetchMapData()
+        setFilter(MeteoriteFilter(yearFrom = "2000", yearTo = "2024"))
     }
 
     private fun fetchMapData() {
@@ -41,7 +40,7 @@ class MeteoriteMapViewModel @Inject constructor(
             where = getWhereQuery(_filter.value ?: MeteoriteFilter())
 
             val response = nasaApi.fetchMapData(token, where)
-            if (response.isSuccessful && response.body() != null) {
+            if (response.isSuccessful) {
                 _mapData.value = response.body()
             } else {
                 Log.e("MapVM", "Error fetching map data: ${response.errorBody()}")
@@ -55,10 +54,5 @@ class MeteoriteMapViewModel @Inject constructor(
             _filter.value = newFilter
             fetchMapData()
         }
-    }
-
-    fun clearFilter() {
-        _filter.value = MeteoriteFilter()
-        fetchMapData()
     }
 }
