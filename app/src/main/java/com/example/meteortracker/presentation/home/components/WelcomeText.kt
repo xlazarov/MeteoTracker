@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.example.meteortracker.R
 
@@ -22,7 +23,8 @@ fun WelcomeText(modifier: Modifier = Modifier) {
             Text(
                 text = "MeteoTracker",
                 style = typography.titleLarge,
-                color = colorScheme.surfaceTint
+                color = colorScheme.primary,
+                fontWeight = FontWeight.SemiBold
             )
             Spacer(modifier = Modifier.height(8.dp))
             Text(

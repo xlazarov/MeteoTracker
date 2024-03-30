@@ -44,7 +44,7 @@ fun TopAppBar(
             Text(
                 text = "DATA.NASA.GOV",
                 style = typography.titleSmall,
-                color = colorScheme.inversePrimary,
+                color = colorScheme.secondaryContainer,
                 fontWeight = FontWeight.SemiBold
             )
         }
