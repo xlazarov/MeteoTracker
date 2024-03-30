@@ -7,8 +7,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
@@ -25,11 +23,9 @@ import com.example.meteortracker.util.ThemeManager
 
 @Composable
 fun HomeScreen(navController: NavController) {
-    val isDarkTheme = ThemeManager.get(LocalContext.current)
-    val heroImage by rememberUpdatedState(
-        newValue =
-        if (isDarkTheme) R.drawable.hero_dark2 else R.drawable.hero_light1
-    )
+    val context = LocalContext.current
+    val isDarkTheme = ThemeManager.getTheme(context)
+    val heroImage = ThemeManager.getHeroImage(context, isDarkTheme)
 
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
