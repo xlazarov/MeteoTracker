@@ -10,10 +10,7 @@ import androidx.compose.material3.Switch
 import androidx.compose.material3.SwitchDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberUpdatedState
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.platform.LocalContext
@@ -22,7 +19,7 @@ import com.example.meteortracker.util.ThemeManager
 @Composable
 fun ThemeSwitch(modifier: Modifier = Modifier) {
     val context = LocalContext.current
-    var isDarkTheme by remember { mutableStateOf(ThemeManager.get(context)) }
+    var isDarkTheme = ThemeManager.getTheme(context)
     val modeIcon by rememberUpdatedState(
         newValue =
         if (isDarkTheme) Icons.TwoTone.DarkMode else Icons.TwoTone.LightMode
@@ -32,7 +29,7 @@ fun ThemeSwitch(modifier: Modifier = Modifier) {
         checked = isDarkTheme,
         onCheckedChange = { isChecked ->
             isDarkTheme = isChecked
-            ThemeManager.set(context, isChecked)
+            ThemeManager.setTheme(context, isChecked)
             (context as? Activity)?.recreate()
         },
         thumbContent = {
