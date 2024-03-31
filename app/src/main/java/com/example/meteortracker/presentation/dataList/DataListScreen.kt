@@ -1,5 +1,6 @@
 package com.example.meteortracker.presentation.dataList
 
+import android.widget.Toast
 import androidx.compose.foundation.gestures.snapping.rememberSnapFlingBehavior
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -10,7 +11,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -20,7 +20,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.meteortracker.R
@@ -38,7 +38,22 @@ fun DataListScreen(
 
     var showDialog by rememberSaveable { mutableStateOf(false) }
     val listState = rememberLazyListState()
+    val context = LocalContext.current
 
+    if (showDialog) {
+        FilterDialog(
+            onDismissRequest = { showDialog = false }
+        )
+    }
+    LaunchedEffect(meteorites, isLoading) {
+        if (meteorites.isEmpty() && !isLoading) {
+            Toast.makeText(
+                context,
+                R.string.no_data,
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+    }
     Column {
         SearchBar(onFilterClick = { showDialog = true })
         LazyColumn(
@@ -75,23 +90,6 @@ fun DataListScreen(
                     }
                 }
             }
-            if (meteorites.isEmpty() && !isLoading) {
-                item {
-                    Box(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(24.dp),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Text(text = stringResource(id = R.string.no_data))
-                    }
-                }
-            }
-        }
-        if (showDialog) {
-            FilterDialog(
-                onDismissRequest = { showDialog = false }
-            )
         }
     }
 }

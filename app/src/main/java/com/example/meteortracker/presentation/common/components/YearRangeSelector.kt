@@ -1,5 +1,6 @@
 package com.example.meteortracker.presentation.common.components
 
+import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -19,6 +20,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
@@ -34,6 +36,9 @@ fun YearRangeSelector(
 ) {
     var yearFrom by remember { mutableStateOf(filter.yearFrom ?: "2010") }
     var yearTo by remember { mutableStateOf(filter.yearTo ?: "2024") }
+
+    val context = LocalContext.current
+    val wrongRange = stringResource(id = R.string.wrong_year_range)
 
     Row(
         modifier = modifier
@@ -71,7 +76,15 @@ fun YearRangeSelector(
         )
         Spacer(modifier = Modifier.width(16.dp))
         Button(
-            onClick = { onClick(yearFrom, yearTo) }
+            onClick = {
+                if ((yearFrom.toIntOrNull() ?: 0) > (yearTo.toIntOrNull() ?: 0)) {
+                    Toast.makeText(
+                        context,
+                        wrongRange,
+                        Toast.LENGTH_LONG
+                    ).show()
+                } else onClick(yearFrom, yearTo)
+            }
         ) {
             Text(stringResource(id = R.string.confirm))
         }
