@@ -26,10 +26,10 @@
     <string name="meteorite_data">Meteorite Data</string>
     <string name="language">Language</string>
     <string name="mode">Mode</string>
-    <string name="dashbutton_map">View meteorite landings on an interactive map</string>
-    <string name="dashbutton_data">View a list of all meteorite landings</string>
-    <string name="dashbutton_stats">Check out statistics of meteor landings around the world</string>
-    <string name="welcome_text">Welcome to MeteoTracker!\n\nEmbark on a cosmic adventure and discover the wonders of the universe at your fingertips.\n\nWith access to NASA\'s open data, MeteoTracker invites you on a journey of uncovering the meteors that have touched the Earth.</string>
+    <string name="go_to_map">Show interactive map</string>
+    <string name="go_to_data">Go to the Data List</string>
+    <string name="go_to_stats">View Statistics</string>
+    <string name="welcome_text">Embark on a cosmic adventure and discover the wonders of the universe at your fingertips.  With access to NASA\'s open data, MeteoTracker invites you on a journey of uncovering the meteors that have touched the Earth.</string>
     <string name="longitude">Longitude</string>
     <string name="latitude">Latitude</string>
     <string name="continent">Continent</string>
@@ -43,4 +43,7 @@
     <string name="locality">Locality</string>
     <string name="per_class">Meteorite Landings per Classification</string>
     <string name="home_background">Home-screen Background</string>
+    <string name="map_text">Visualize the distribution of meteorite landings on an interactive global map. Zoom in and explore localities of impact.</string>
+    <string name="stats_text">Explore visual data representations and uncover the frequency and classifications of meteorite landings over time.</string>
+    <string name="wrong_year_range">The \'From\' year cannot be greater than the \'To\' year.</string>
 </resources>

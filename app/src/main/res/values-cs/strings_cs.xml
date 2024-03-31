@@ -27,10 +27,10 @@
     <string name="meteorite_data">Meteoritní data</string>
     <string name="language">Jazyk</string>
     <string name="mode">Režim</string>
-    <string name="dashbutton_map">Prohlédněte si přistání meteoritů na interaktivní mapě</string>
-    <string name="dashbutton_data">Podívejte se na seznam všech přistání meteoritů</string>
-    <string name="dashbutton_stats">Podívejte se na statistiky přistání meteorů po celém světě</string>
-    <string name="welcome_text">Vítejte v MeteoTracker!\n\nVydejte se na vesmírné dobrodružství a objevte zázraky vesmíru na dosah ruky.\n\nDíky přístupu k otevřeným datům NASA vás MeteoTracker zve na cestu za odhalováním meteoritů, které se dotkly Země.</string>
+    <string name="go_to_map">Zobrazit interaktivní mapu</string>
+    <string name="go_to_data">Přejděte na seznam dat</string>
+    <string name="go_to_stats">Zobrazit statistiky</string>
+    <string name="welcome_text">Vydejte se na vesmírné dobrodružství a objevte zázraky vesmíru na dosah ruky.\n\nDíky přístupu k otevřeným datům NASA vás MeteoTracker zve na cestu za odhalováním meteoritů, které se dotkly Země.</string>
     <string name="longitude">Zeměpisná délka</string>
     <string name="latitude">Zeměpisná šířka</string>
     <string name="continent">Kontinent</string>
@@ -44,4 +44,7 @@
     <string name="locality">Lokalita</string>
     <string name="per_class">Přistání meteoritů podle klasifikace</string>
     <string name="home_background">Pozadí domovské obrazovky</string>
+    <string name="map_text">Vizualizujte rozložení přistání meteoritů na interaktivní globální mapě. Přibližte a prozkoumejte místa dopadu.</string>
+    <string name="stats_text">Prozkoumejte vizuální reprezentace dat a odhalte frekvenci a klasifikaci přistání meteoritů v průběhu času.</string>
+    <string name="wrong_year_range">Rok „Od“ nemůže být větší než rok „Do“.</string>
 </resources>

@@ -27,10 +27,10 @@
     <string name="meteorite_data">Meteoritendaten</string>
     <string name="language">Sprache</string>
     <string name="mode">Modus</string>
-    <string name="dashbutton_map">Sehen Sie sich Meteoritenlandungen auf einer interaktiven Karte an</string>
-    <string name="dashbutton_data">Sehen Sie sich eine Liste aller Meteoritenlandungen an</string>
-    <string name="dashbutton_stats">Schauen Sie sich Statistiken zu Meteorlandungen auf der ganzen Welt an</string>
-    <string name="welcome_text">Willkommen bei MeteoTracker!\n\nBegeben Sie sich auf ein kosmisches Abenteuer und entdecken Sie die Wunder des Universums zum Greifen nah.\n\nMit Zugriff auf die offenen Daten der NASA lädt MeteoTracker Sie auf eine Reise zur Entdeckung der Meteoriten ein, die Erde berührt haben.</string>
+    <string name="go_to_map">Interaktive Karte anzeigen</string>
+    <string name="go_to_data">Gehen Sie zur Datenliste</string>
+    <string name="go_to_stats">Statistiken anzeigen</string>
+    <string name="welcome_text">Begeben Sie sich auf ein kosmisches Abenteuer und entdecken Sie die Wunder des Universums zum Greifen nah.\n\nMit Zugriff auf die offenen Daten der NASA lädt MeteoTracker Sie auf eine Reise zur Entdeckung der Meteoriten ein, die Erde berührt haben.</string>
     <string name="longitude">Längengrad</string>
     <string name="latitude">Breite</string>
     <string name="continent">Kontinent</string>
@@ -44,4 +44,7 @@
     <string name="locality">Ort</string>
     <string name="per_class">Meteoritenlandungen pro Klassifizierung</string>
     <string name="home_background">Hintergrund des Startbildschirms</string>
+    <string name="map_text">Visualisieren Sie die Verteilung von Meteoriteneinschlägen auf einer interaktiven Weltkarte. Zoomen Sie hinein und erkunden Sie die Wirkungsorte.</string>
+    <string name="stats_text">Erkunden Sie visuelle Datendarstellungen und entdecken Sie die Häufigkeit und Klassifizierung von Meteoritenlandungen im Laufe der Zeit.</string>
+    <string name="wrong_year_range">Das „Von“-Jahr darf nicht größer sein als das „Bis“-Jahr.</string>
 </resources>
