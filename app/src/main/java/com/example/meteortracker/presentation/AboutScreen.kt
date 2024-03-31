@@ -3,8 +3,12 @@ package com.example.meteortracker.presentation
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.MaterialTheme.typography
@@ -20,7 +24,9 @@ fun AboutScreen(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
             .fillMaxSize()
-            .padding(24.dp),
+            .padding(horizontal = 24.dp)
+            .padding(top = 24.dp)
+            .verticalScroll(rememberScrollState()),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         Text(text = "About MeteoTracker", style = typography.titleLarge)
@@ -63,6 +69,7 @@ fun AboutScreen(modifier: Modifier = Modifier) {
             text = "This app is developed for educational purposes and is not affiliated with NASA or Socrata. All data is attributed to their respective sources.",
             style = typography.bodyLarge
         )
+        Spacer(modifier = Modifier.height(24.dp))
     }
 }
 
