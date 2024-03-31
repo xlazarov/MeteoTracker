@@ -19,7 +19,7 @@ import com.example.meteortracker.R
 @Composable
 fun WelcomeText(modifier: Modifier = Modifier) {
     Card(modifier = modifier, shape = RectangleShape) {
-        Column(modifier = Modifier.padding(vertical = 16.dp, horizontal = 24.dp)) {
+        Column(modifier = Modifier.padding(24.dp)) {
             Text(
                 text = "MeteoTracker",
                 style = typography.titleLarge,

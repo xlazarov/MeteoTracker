@@ -6,12 +6,14 @@ import android.widget.LinearLayout
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme.colorScheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -33,7 +35,9 @@ fun PieChart(
     modifier: Modifier = Modifier,
 ) {
     val chartData by viewModel.chartData.observeAsState(emptyList())
-    val maxEntrySize = if (chartData.size < 50) chartData.size else 50
+    if (chartData.isEmpty()) Text(text = stringResource(id = R.string.no_data))
+
+    val maxEntrySize = if (chartData.size < 30) chartData.size else 30
 
     AndroidView(
         modifier = modifier
@@ -47,8 +51,9 @@ fun PieChart(
                     .reversed()
                     .subList(0, maxEntrySize)
 
-                val dataSet = PieDataSet(entries, chartName).apply {
+                val dataSet = PieDataSet(entries, " - $dataName").apply {
                     colors = generateRandomColorList(entries.size)
+                    setDrawValues(false)
                 }
                 data = PieData(dataSet)
 
@@ -70,13 +75,13 @@ fun PieChart(
 
                 description.apply {
                     isEnabled = true
-                    text = dataName
+                    text = chartName
                     textColor = color.toArgb()
                 }
 
                 isDrawHoleEnabled = false
                 setDrawEntryLabels(false)
-                setUsePercentValues(false)
+                setUsePercentValues(true)
                 setTouchEnabled(true)
 
                 invalidate()

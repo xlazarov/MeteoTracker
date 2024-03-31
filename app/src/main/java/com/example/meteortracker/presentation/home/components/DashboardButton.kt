@@ -23,7 +23,7 @@ fun DashboardButton(
     onClick: () -> Unit
 ) {
     Button(
-        modifier = modifier.fillMaxWidth(0.6f),
+        modifier = modifier.fillMaxWidth(0.8f),
         shape = CardDefaults.shape,
         onClick = onClick
     ) {
