@@ -97,6 +97,6 @@ private fun generateRandomColorList(size: Int): List<Int> {
         val r = random.nextInt(200)
         val g = random.nextInt(180)
         val b = random.nextInt(256)
-        Color(r, g, b, 200).toArgb()
+        Color(r, g, b).toArgb()
     }
 }

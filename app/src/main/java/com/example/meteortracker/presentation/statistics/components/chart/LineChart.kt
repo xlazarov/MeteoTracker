@@ -29,8 +29,8 @@ fun LineChart(
     dataName: String,
     chartName: String,
     modifier: Modifier = Modifier,
-    lineColor: Color = colorScheme.primary,
-    colorFill: Color = colorScheme.tertiary,
+    chartColor: Color = colorScheme.primary,
+    colorFill: Color = colorScheme.secondary,
     textColor: Color = colorScheme.onBackground,
 ) {
     val chartData by viewModel.chartData.observeAsState(emptyList())
@@ -49,7 +49,7 @@ fun LineChart(
                         .map { Entry(it.data.toFloat(), it.count.toFloat()) }
 
                     val dataSet = LineDataSet(entries, chartName).apply {
-                        color = lineColor.toArgb()
+                        color = chartColor.toArgb()
                         setDrawValues(true)
                         setDrawCircles(true)
                         setDrawFilled(true)
