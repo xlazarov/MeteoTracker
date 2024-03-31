@@ -1,5 +1,6 @@
 package com.example.meteortracker.presentation.common.components
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -17,8 +18,12 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.scale
+import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.example.meteortracker.R
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -31,7 +36,7 @@ fun TopAppBar(
         modifier = Modifier
             .fillMaxWidth()
             .background(colorScheme.primary)
-            .padding(12.dp),
+            .padding(vertical = 8.dp, horizontal = 16.dp),
         contentAlignment = Alignment.Center
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
@@ -57,6 +62,18 @@ fun TopAppBar(
                 contentDescription = null,
                 modifier = Modifier.size(28.dp),
                 tint = colorScheme.onPrimary
+            )
+        }
+        IconButton(
+            enabled = false,
+            onClick = {},
+            modifier = Modifier.align(Alignment.CenterEnd)
+        ) {
+            Image(
+                painter = painterResource(id = R.drawable.logo),
+                contentDescription = "logo",
+                modifier = Modifier.scale(1.8f),
+                colorFilter = ColorFilter.tint(colorScheme.onPrimary)
             )
         }
     }
