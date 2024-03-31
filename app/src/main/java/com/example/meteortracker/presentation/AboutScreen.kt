@@ -23,10 +23,10 @@ fun AboutScreen(modifier: Modifier = Modifier) {
             .padding(24.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        Text(text = "About Meteorite Tracker", style = typography.titleLarge)
+        Text(text = "About MeteoTracker", style = typography.titleLarge)
         HorizontalDivider()
         Text(
-            text = "Meteorite Explorer is an application that leverages open data provided by NASA to offer users insights into meteorite landings across the globe. Utilizing the comprehensive datasets available through NASA's open data portal, the app aims to educate and engage space enthusiasts and researchers alike.",
+            text = "MeteoTracker is an application that leverages open data provided by NASA to offer users insights into meteorite landings across the globe. Utilizing the comprehensive datasets available through NASA's open data portal, the app aims to educate and engage space enthusiasts and researchers alike.",
             style = typography.bodyLarge
         )
         Text(
