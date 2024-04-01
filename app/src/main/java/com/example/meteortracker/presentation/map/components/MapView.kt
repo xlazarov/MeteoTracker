@@ -1,6 +1,8 @@
 package com.example.meteortracker.presentation.map.components
 
+import android.os.Build
 import android.view.ContextThemeWrapper
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.BasicAlertDialog
@@ -26,6 +28,7 @@ import org.osmdroid.util.GeoPoint
 import org.osmdroid.views.MapView
 import org.osmdroid.views.overlay.Marker
 
+@RequiresApi(Build.VERSION_CODES.Q)
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MapView(
@@ -39,9 +42,9 @@ fun MapView(
     val view = remember {
         MapView(ContextThemeWrapper(context, R.style.Theme_MeteorTracker)).apply {
             setTileSource(TileSourceFactory.MAPNIK)
+            minZoomLevel = 3.0
             setMultiTouchControls(true)
             setScrollableAreaLimitDouble(worldMapBounds)
-            minZoomLevel = 1.0
             controller.setZoom(if (meteorites.size == 1) 6.0 else 3.0)
             controller.setCenter(
                 if (meteorites.size == 1) GeoPoint(meteorites[0].reclat, meteorites[0].reclong)
