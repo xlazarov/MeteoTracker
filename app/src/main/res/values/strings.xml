@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MeteoriteTracker</string>
+    <string name="app_name" translatable="false">MeteorTracker</string>
     <string name="show_map">Show on map</string>
     <string name="fall">Fall</string>
     <string name="mass">Mass</string>
@@ -29,7 +29,7 @@
     <string name="go_to_map">Show interactive map</string>
     <string name="go_to_data">Go to the Data List</string>
     <string name="go_to_stats">View Statistics</string>
-    <string name="welcome_text">Embark on a cosmic adventure and discover the wonders of the universe at your fingertips.  With access to NASA\'s open data, MeteoTracker invites you on a journey of uncovering the meteors that have touched the Earth.</string>
+    <string name="welcome_text">With access to NASA\'s open data, MeteorTracker invites you on a journey of uncovering the meteors that have touched the Earth.</string>
     <string name="longitude">Longitude</string>
     <string name="latitude">Latitude</string>
     <string name="continent">Continent</string>

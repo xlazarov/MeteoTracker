@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">MeteoriteTracker</string>
     <string name="show_map">Auf der Karte anzeigen</string>
     <string name="fall">Fallen</string>
     <string name="mass">Masse</string>
@@ -30,7 +29,7 @@
     <string name="go_to_map">Interaktive Karte anzeigen</string>
     <string name="go_to_data">Gehen Sie zur Datenliste</string>
     <string name="go_to_stats">Statistiken anzeigen</string>
-    <string name="welcome_text">Begeben Sie sich auf ein kosmisches Abenteuer und entdecken Sie die Wunder des Universums zum Greifen nah.\n\nMit Zugriff auf die offenen Daten der NASA lädt MeteoTracker Sie auf eine Reise zur Entdeckung der Meteoriten ein, die Erde berührt haben.</string>
+    <string name="welcome_text">Mit Zugriff auf die offenen Daten der NASA lädt MeteoTracker Sie auf eine Reise zur Entdeckung der Meteoriten ein, die Erde berührt haben.</string>
     <string name="longitude">Längengrad</string>
     <string name="latitude">Breite</string>
     <string name="continent">Kontinent</string>

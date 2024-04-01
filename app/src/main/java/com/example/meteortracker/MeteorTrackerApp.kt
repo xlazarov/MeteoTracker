@@ -6,7 +6,7 @@ import com.example.meteortracker.util.LocaleManager
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
-class MeteoriteTrackerApp : Application() {
+class MeteorTrackerApp : Application() {
     override fun attachBaseContext(base: Context) {
         super.attachBaseContext(LocaleManager.update(base))
     }

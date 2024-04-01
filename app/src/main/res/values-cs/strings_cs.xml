@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">MeteoriteTracker</string>
     <string name="show_map">Zobrazit na mapě</string>
     <string name="fall">Pád</string>
     <string name="mass">Hmotnost</string>
@@ -30,7 +29,7 @@
     <string name="go_to_map">Zobrazit interaktivní mapu</string>
     <string name="go_to_data">Přejděte na seznam dat</string>
     <string name="go_to_stats">Zobrazit statistiky</string>
-    <string name="welcome_text">Vydejte se na vesmírné dobrodružství a objevte zázraky vesmíru na dosah ruky.\n\nDíky přístupu k otevřeným datům NASA vás MeteoTracker zve na cestu za odhalováním meteoritů, které se dotkly Země.</string>
+    <string name="welcome_text">Díky přístupu k otevřeným datům NASA vás MeteoTracker zve na cestu za odhalováním meteoritů, které se dotkly Země.</string>
     <string name="longitude">Zeměpisná délka</string>
     <string name="latitude">Zeměpisná šířka</string>
     <string name="continent">Kontinent</string>
