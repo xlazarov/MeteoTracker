@@ -24,6 +24,7 @@ private val LightColorScheme = lightColorScheme(
 //    onSecondary = md_theme_light_onSecondary,
 //    secondaryContainer = md_theme_light_secondaryContainer,
 //    onSecondaryContainer = md_theme_light_onSecondaryContainer,
+    inversePrimary = md_theme_light_inversePrimary
 )
 
 private val DarkColorScheme = darkColorScheme(
@@ -35,6 +36,7 @@ private val DarkColorScheme = darkColorScheme(
 //    onSecondary = md_theme_dark_onSecondary,
 //    secondaryContainer = md_theme_dark_secondaryContainer,
 //    onSecondaryContainer = md_theme_dark_onSecondaryContainer,
+    inversePrimary = md_theme_dark_inversePrimary
 )
 
 @Composable
