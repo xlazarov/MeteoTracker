@@ -2,7 +2,9 @@ package com.example.meteortracker.presentation.statistics
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.runtime.Composable
@@ -30,23 +32,22 @@ fun StatisticsScreen(
                 .fillMaxSize()
                 .padding(62.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.SpaceEvenly
+            verticalArrangement = Arrangement.Center
         ) {
             DashboardButton(
                 imageId = R.drawable.piechart_image,
                 title = stringResource(id = R.string.per_class),
                 color = colorScheme.secondary,
-                description = stringResource(id = R.string.pie_chart),
-                modifier = Modifier.padding(vertical = 24.dp)
+                description = stringResource(id = R.string.pie_chart)
             ) {
                 navController.navigate(Screen.PieChart.name)
             }
+            Spacer(modifier = Modifier.height(24.dp))
             DashboardButton(
                 imageId = R.drawable.linechart_image,
                 title = stringResource(id = R.string.per_year),
                 color = colorScheme.secondary,
-                description = stringResource(id = R.string.line_chart),
-                modifier = Modifier.padding(vertical = 24.dp)
+                description = stringResource(id = R.string.line_chart)
             ) {
                 navController.navigate(Screen.LineChart.name)
             }
