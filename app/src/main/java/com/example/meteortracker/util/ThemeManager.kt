@@ -41,7 +41,7 @@ object ThemeManager {
         return if (isDarkTheme) {
             sharedPreferences.getInt(HERO_IMAGE_DARK_KEY, R.drawable.hero_dark3)
         } else {
-            sharedPreferences.getInt(HERO_IMAGE_LIGHT_KEY, R.drawable.hero_light2)
+            sharedPreferences.getInt(HERO_IMAGE_LIGHT_KEY, R.drawable.hero_light1)
         }
     }
 
