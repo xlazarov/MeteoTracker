@@ -31,6 +31,12 @@ enum class Screen {
     About
 }
 
+/**
+ * Sets up the navigation graph for the app, including a modal navigation drawer and scaffold structure.
+ *
+ * Each screen within [Screen.entries] is added to the NavHost for navigation. The top app bar and drawer
+ * content are defined, with drawer toggle functionality managed by [drawerState] and [coroutineScope].
+ */
 @Composable
 fun NavGraph(
     navController: NavHostController = rememberNavController(),

@@ -28,6 +28,11 @@ import com.example.meteortracker.R
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
+/**
+ * A custom TopAppBar of the app, featuring the app's title, a navigation menu button,
+ * and a decorative app logo. The [drawerState] controls the navigation drawer's state, allowing
+ * the menu button to open it asynchronously with the [coroutineScope].
+ */
 @Composable
 fun TopAppBar(
     drawerState: DrawerState,

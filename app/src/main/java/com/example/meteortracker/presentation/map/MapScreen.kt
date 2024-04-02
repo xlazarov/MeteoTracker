@@ -14,6 +14,10 @@ import com.example.meteortracker.presentation.common.components.YearRangeSelecto
 import com.example.meteortracker.presentation.map.components.MapView
 import com.example.meteortracker.presentation.map.viewModel.MeteoriteMapViewModel
 
+/**
+ * Displays a screen with a map view with marked meteorite landing locations of selected year range,
+ * set by [YearRangeSelector].
+ */
 @Composable
 fun MapScreen(
     viewModel: MeteoriteMapViewModel = hiltViewModel()

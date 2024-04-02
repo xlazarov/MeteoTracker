@@ -19,6 +19,10 @@ import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 
+/**
+ * Presents an about page for MeteorTracker, detailing the app's purpose, data sources, and legal information.
+ * Includes clickable links to external resources for further exploration.
+ */
 @Composable
 fun AboutScreen(modifier: Modifier = Modifier) {
     Column(
@@ -29,10 +33,10 @@ fun AboutScreen(modifier: Modifier = Modifier) {
             .verticalScroll(rememberScrollState()),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        Text(text = "About MeteoTracker", style = typography.titleLarge)
+        Text(text = "About MeteorTracker", style = typography.titleLarge)
         HorizontalDivider()
         Text(
-            text = "MeteoTracker is an application that leverages open data provided by NASA to offer users insights into meteorite landings across the globe. Utilizing the comprehensive datasets available through NASA's open data portal, the app aims to educate and engage space enthusiasts and researchers alike.",
+            text = "MeteorTracker is an application that leverages open data provided by NASA to offer users insights into meteorite landings across the globe. Utilizing the comprehensive datasets available through NASA's open data portal, the app aims to educate and engage space enthusiasts and researchers alike.",
             style = typography.bodyLarge
         )
         Text(
@@ -74,7 +78,7 @@ fun AboutScreen(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun LinkText(text: String, url: String) {
+private fun LinkText(text: String, url: String) {
     val uriHandler = LocalUriHandler.current
     Text(
         text = text,

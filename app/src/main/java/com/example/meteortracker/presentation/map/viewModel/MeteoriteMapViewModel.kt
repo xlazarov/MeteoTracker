@@ -13,6 +13,12 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+/**
+ * ViewModel for managing and presenting meteorite landing data on a map.
+ *
+ * It interacts with the [NasaApiService] to fetch meteorite data based on year range filter and
+ * manages the UI state for displaying this data.
+ */
 @HiltViewModel
 class MeteoriteMapViewModel @Inject constructor(
     private val nasaApi: NasaApiService
@@ -34,6 +40,9 @@ class MeteoriteMapViewModel @Inject constructor(
         setFilter(MeteoriteFilter(yearFrom = "2000", yearTo = "2024"))
     }
 
+    /**
+     * Fetches meteorite landing data from the [nasaApi] based on the current [filter] settings.
+     */
     private fun fetchMapData() {
         _isLoading.value = true
         viewModelScope.launch {
@@ -49,6 +58,9 @@ class MeteoriteMapViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Updates the filter to [newFilter] and fetches the data from the API if the filter has changed.
+     */
     fun setFilter(newFilter: MeteoriteFilter) {
         if (_filter.value != newFilter) {
             _filter.value = newFilter

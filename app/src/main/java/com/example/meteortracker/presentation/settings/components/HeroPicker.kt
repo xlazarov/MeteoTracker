@@ -9,6 +9,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import com.example.meteortracker.util.ThemeManager
 
+/**
+ * Allows selection of a hero image for the current theme, refreshing UI on change.
+ */
 @Composable
 fun HeroPicker() {
     val context = LocalContext.current

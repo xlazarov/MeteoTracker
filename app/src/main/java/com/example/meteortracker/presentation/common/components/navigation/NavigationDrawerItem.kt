@@ -13,6 +13,10 @@ import com.example.meteortracker.util.getName
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
+/**
+ * Represents an individual item in the navigation drawer, configured for navigation to the [screen] specified.
+ * When clicked, navigates to the associated screen and closes the drawer.
+ */
 @Composable
 fun NavigationDrawerItem(
     navController: NavController,

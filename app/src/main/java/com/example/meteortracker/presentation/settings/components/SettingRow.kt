@@ -12,6 +12,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 
+/**
+ * A reusable row for settings, displaying an [icon], a [title], and custom [content]
+ */
 @Composable
 fun SettingRow(icon: ImageVector, title: String, content: @Composable () -> Unit? = {}) {
     Row(

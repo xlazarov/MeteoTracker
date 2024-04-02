@@ -23,8 +23,10 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.example.meteortracker.R
 import com.example.meteortracker.data.MeteoriteFilter
-
-
+/**
+ * Composable that presents filter options for meteorite search criteria, including fall status, type, year range, and mass range.
+ * Allows users to select filters and applies them by invoking [onSelectRequest] with the updated filter.
+ */
 @Composable
 fun FilterDialogContent(
     filter: MeteoriteFilter,
@@ -203,6 +205,9 @@ fun FilterDialogContent(
     }
 }
 
+/**
+ * Determines the filter string based on boolean selections for a given category (e.g., fall status or type).
+ */
 private fun getFilter(
     first: Boolean,
     second: Boolean,

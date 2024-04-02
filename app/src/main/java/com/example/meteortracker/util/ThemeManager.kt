@@ -3,6 +3,10 @@ package com.example.meteortracker.util
 import android.content.Context
 import com.example.meteortracker.R
 
+/**
+ * Handles theme and hero image preferences for the app, providing functionality to switch between light and dark themes,
+ * and to select and retrieve hero images according to the current theme.
+ */
 object ThemeManager {
     private const val THEME_PREF = "theme_preference"
     private const val THEME_KEY = "theme_key"

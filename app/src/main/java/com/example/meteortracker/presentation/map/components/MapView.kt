@@ -1,8 +1,6 @@
 package com.example.meteortracker.presentation.map.components
 
-import android.os.Build
 import android.view.ContextThemeWrapper
-import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.BasicAlertDialog
@@ -21,14 +19,19 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import com.example.meteortracker.R
 import com.example.meteortracker.data.Meteorite
-import com.example.meteortracker.presentation.dataList.components.MeteoriteDetails
+import com.example.meteortracker.presentation.dataList.components.card.MeteoriteDetails
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory
 import org.osmdroid.util.BoundingBox
 import org.osmdroid.util.GeoPoint
 import org.osmdroid.views.MapView
 import org.osmdroid.views.overlay.Marker
 
-@RequiresApi(Build.VERSION_CODES.Q)
+/**
+ * Utilizes the osmdroid library to render the map and manage geographical data.
+ *
+ * Displays a map view with markers for each of the [meteorites] location.
+ * Allows users to tap on markers to view details about each meteorite.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MapView(

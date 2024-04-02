@@ -14,6 +14,10 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+/**
+ * Manages data for chart visualizations of meteorite information, handling data fetching and state.
+ * It communicates with the [NasaApiService] to retrieve and prepare chart data based on selected filters.
+ */
 @HiltViewModel
 class MeteoriteChartViewModel @Inject constructor(
     private val nasaApi: NasaApiService

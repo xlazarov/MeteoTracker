@@ -24,11 +24,14 @@ import androidx.compose.ui.platform.LocalContext
 import com.example.meteortracker.util.LocaleManager
 import com.example.meteortracker.util.restartActivity
 
+/**
+ * Dropdown for language selection. Changes apply immediately by [restartActivity].
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun LanguageDropdown(modifier: Modifier = Modifier) {
     val context = LocalContext.current
-    val languages = listOf("cs", "en", "de")
+    val languages = LocaleManager.getLocaleOptions()
 
     var isExpanded by rememberSaveable { mutableStateOf(false) }
     var selectedLanguage by remember { mutableStateOf(LocaleManager.get(context)) }

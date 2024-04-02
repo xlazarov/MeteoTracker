@@ -19,6 +19,12 @@ import com.example.meteortracker.presentation.settings.components.LanguageDropdo
 import com.example.meteortracker.presentation.settings.components.SettingRow
 import com.example.meteortracker.presentation.settings.components.ThemeSwitch
 
+/**
+ * Settings screen allowing users to customize app preferences such as theme mode,
+ * language, and the home screen background image.
+ *
+ * Each setting is encapsulated within a [SettingRow] for uniformity.
+ */
 @Composable
 fun SettingsScreen() {
     Column(

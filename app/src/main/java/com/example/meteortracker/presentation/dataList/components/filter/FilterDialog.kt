@@ -21,6 +21,9 @@ import com.example.meteortracker.R
 import com.example.meteortracker.data.MeteoriteFilter
 import com.example.meteortracker.presentation.dataList.viewModel.MeteoriteListViewModel
 
+/**
+ * Presents a dialog allowing the user to apply filters to the meteorite data list.
+ */
 @Composable
 fun FilterDialog(
     onDismissRequest: () -> Unit,

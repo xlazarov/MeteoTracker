@@ -16,6 +16,11 @@ import com.example.meteortracker.data.MeteoriteFilter
 import com.example.meteortracker.presentation.common.components.YearRangeSelector
 import com.example.meteortracker.presentation.statistics.viewModel.MeteoriteChartViewModel
 
+/**
+ * Renders a screen for displaying meteorite chart visualizations based on selected criteria.
+ * Allows for year range selection, triggering chart updates to reflect the chosen timeframe.
+ * [content] defines the specific chart to be displayed, with [data] indicating the type of data visualization.
+ */
 @Composable
 fun ChartScreen(
     content: @Composable () -> Unit,

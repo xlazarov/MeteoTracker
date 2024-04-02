@@ -28,6 +28,10 @@ import androidx.compose.ui.unit.dp
 import com.example.meteortracker.R
 import com.example.meteortracker.data.MeteoriteFilter
 
+/**
+ * Allows to set the [filter] with year range after validation. Displays a toast for invalid ranges.
+ * Triggers [onClick] with start and end years if valid. Customizable with [modifier].
+ */
 @Composable
 fun YearRangeSelector(
     filter: MeteoriteFilter,

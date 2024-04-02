@@ -23,6 +23,9 @@ import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
 
+/**
+ * Displays a line chart visualizing [viewModel]'s observed data.
+ */
 @Composable
 fun LineChart(
     viewModel: MeteoriteChartViewModel = hiltViewModel(),

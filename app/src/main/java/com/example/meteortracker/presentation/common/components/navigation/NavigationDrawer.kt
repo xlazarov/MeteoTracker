@@ -20,6 +20,10 @@ import androidx.navigation.NavController
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
+/**
+ * Displays a navigation drawer with items for navigating to main screens.
+ * Includes a close button to hide the drawer.
+ */
 @Composable
 fun NavigationDrawer(
     navController: NavController,

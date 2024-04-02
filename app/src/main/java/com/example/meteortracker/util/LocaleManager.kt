@@ -3,9 +3,14 @@ package com.example.meteortracker.util
 import android.content.Context
 import java.util.Locale
 
+/**
+ * Manages the app's locale preferences, allowing for retrieval and updating of the current language setting.
+ */
 object LocaleManager {
     private const val LOCALE_PREF = "locale_preference"
     private const val LOCALE_KEY = "locale_key"
+
+    private val LOCALE_OPTIONS = listOf("cs", "en", "de")
 
     fun get(context: Context): String {
         val sharedPreferences = context.getSharedPreferences(LOCALE_PREF, Context.MODE_PRIVATE)
@@ -36,5 +41,9 @@ object LocaleManager {
         config.setLayoutDirection(locale)
 
         return context.createConfigurationContext(config)
+    }
+
+    fun getLocaleOptions(): List<String> {
+        return LOCALE_OPTIONS
     }
 }

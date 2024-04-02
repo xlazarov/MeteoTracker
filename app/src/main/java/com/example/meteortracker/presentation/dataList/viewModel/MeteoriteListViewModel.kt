@@ -13,6 +13,10 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+/**
+ * ViewModel managing the fetching and presentation of meteorite data from [NasaApiService].
+ * Handles data pagination, filtering, and loading state.
+ */
 @HiltViewModel
 class MeteoriteListViewModel @Inject constructor(
     private val nasaApi: NasaApiService

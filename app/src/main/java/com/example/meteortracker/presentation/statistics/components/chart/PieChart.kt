@@ -26,6 +26,9 @@ import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
 import java.util.Random
 
+/**
+ * Displays a pie chart visualizing [viewModel]'s observed data.
+ */
 @Composable
 fun PieChart(
     viewModel: MeteoriteChartViewModel = hiltViewModel(),

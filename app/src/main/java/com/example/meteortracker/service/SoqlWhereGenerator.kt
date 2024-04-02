@@ -2,6 +2,9 @@ package com.example.meteortracker.service
 
 import com.example.meteortracker.data.MeteoriteFilter
 
+/**
+ * Constructs a WHERE query string for API requests based on the specified [filter] criteria.
+ */
 fun getWhereQuery(filter: MeteoriteFilter): String {
     val queryParts = mutableListOf<String>()
 

@@ -16,6 +16,9 @@ import androidx.compose.ui.draw.scale
 import androidx.compose.ui.platform.LocalContext
 import com.example.meteortracker.util.ThemeManager
 
+/**
+ * Custom switch for toggling between dark and light themes, while updating the app's theme accordingly.
+ */
 @Composable
 fun ThemeSwitch(modifier: Modifier = Modifier) {
     val context = LocalContext.current

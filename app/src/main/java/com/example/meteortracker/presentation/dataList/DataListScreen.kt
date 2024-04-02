@@ -24,11 +24,17 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.meteortracker.R
-import com.example.meteortracker.presentation.dataList.components.MeteoriteCard
 import com.example.meteortracker.presentation.dataList.components.SearchBar
+import com.example.meteortracker.presentation.dataList.components.card.MeteoriteCard
 import com.example.meteortracker.presentation.dataList.components.filter.FilterDialog
 import com.example.meteortracker.presentation.dataList.viewModel.MeteoriteListViewModel
 
+/**
+ * The DataListScreen displays a list of fetched meteorites.
+ *
+ * Includes a SearchBar and a FilterDialog for advanced search options.
+ * Displays a toast if no data is available and shows a loading indicator while data is being fetched.
+ */
 @Composable
 fun DataListScreen(
     viewModel: MeteoriteListViewModel = hiltViewModel()

@@ -32,6 +32,10 @@ import com.example.meteortracker.R
 import com.example.meteortracker.data.MeteoriteFilter
 import com.example.meteortracker.presentation.dataList.viewModel.MeteoriteListViewModel
 
+/**
+ * Displays a search bar for querying meteorite data by name, with a filter button for advanced options.
+ * Text changes update the search query in [viewModel].
+ */
 @Composable
 fun SearchBar(
     onFilterClick: () -> Unit,

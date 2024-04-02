@@ -10,6 +10,9 @@ import dagger.hilt.components.SingletonComponent
 import org.osmdroid.config.Configuration
 import org.osmdroid.config.IConfigurationProvider
 
+/**
+ * Dagger module for providing map configuration across the app.
+ */
 @Module
 @InstallIn(SingletonComponent::class)
 object MapModule {
