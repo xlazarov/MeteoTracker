@@ -1,7 +1,7 @@
-# 🌠MeteoTracker🌠
+# 🌠MeteorTracker🌠
 
 ## Introduction 
-MeteoTracker is an application designed to provide detailed information about fallen meteorites. Utilizing data directly from NASA's open API, the app offers an interactive map for users to explore the locations of meteorite landings, detailed statistics through charts, and an informative list detailing each meteorite's specific characteristics.
+MeteorTracker is an application designed to provide detailed information about fallen meteorites. Utilizing data directly from NASA's open API, the app offers an interactive map for users to explore the locations of meteorite landings, detailed statistics through charts, and an informative list detailing each meteorite's specific characteristics.
 
 ## Features
 - **Interactive Map**🗺️ : Powered by the Osmdroid library, users can visually navigate through the global map to discover the locations of fallen meteorites.
@@ -11,6 +11,7 @@ MeteoTracker is an application designed to provide detailed information about fa
 - **Dependency Injection**💉: Implements Dagger-Hilt for streamlined and maintainable dependency injection.
 - **Localization**🌐: Offers multiple language support with the ability for users to select their preferred language directly from the UI.
 - **Theme Switching**🌗: Users can switch between light and dark themes to suit their preference.
+- **Background preference**🖼️: Users can switch between app background images by their choice in both light and dark theme.
 
 ## Technologies Used
 - Jetpack Compose
@@ -18,5 +19,4 @@ MeteoTracker is an application designed to provide detailed information about fa
 - MPAndroidChart for chart visualizations
 - Retrofit for network requests
 - SOQL for data querying
-- Dagger-Hilt for dependency injection 
-- Materal Design Theme Builder
+- Dagger-Hilt for dependency injection
