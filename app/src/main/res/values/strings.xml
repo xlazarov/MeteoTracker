@@ -41,9 +41,12 @@
     <string name="admin_area">Administrative area</string>
     <string name="unknown">unknown</string>
     <string name="locality">Locality</string>
-    <string name="per_class">Meteorite Landings per Classification</string>
+    <string name="per_class">Meteorite Landingsper\nper Classification</string>
     <string name="home_background">Home-screen Background</string>
     <string name="map_text">Visualize the distribution of meteorite landings on an interactive global map. Zoom in and explore localities of impact.</string>
     <string name="stats_text">Explore visual data representations and uncover the frequency and classifications of meteorite landings over time.</string>
     <string name="wrong_year_range">The \'From\' year cannot be greater than the \'To\' year.</string>
+    <string name="per_year">Meteorite Landings\nper Year</string>
+    <string name="pie_chart">Pie Chart</string>
+    <string name="line_chart">Line Chart</string>
 </resources>

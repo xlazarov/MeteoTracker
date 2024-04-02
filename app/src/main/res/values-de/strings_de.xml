@@ -41,9 +41,12 @@
     <string name="admin_area">Verwaltungsbereich</string>
     <string name="unknown">Unbekannt</string>
     <string name="locality">Ort</string>
-    <string name="per_class">Meteoritenlandungen pro Klassifizierung</string>
+    <string name="per_class">Meteoritenlandungen\npro Klassifizierung</string>
     <string name="home_background">Hintergrund des Startbildschirms</string>
     <string name="map_text">Visualisieren Sie die Verteilung von Meteoriteneinschlägen auf einer interaktiven Weltkarte. Zoomen Sie hinein und erkunden Sie die Wirkungsorte.</string>
     <string name="stats_text">Erkunden Sie visuelle Datendarstellungen und entdecken Sie die Häufigkeit und Klassifizierung von Meteoritenlandungen im Laufe der Zeit.</string>
     <string name="wrong_year_range">Das „Von“-Jahr darf nicht größer sein als das „Bis“-Jahr.</string>
+    <string name="per_year">Meteoritenlandungen\npro Jahr</string>
+    <string name="pie_chart">Kuchendiagramm</string>
+    <string name="line_chart">Liniendiagramm</string>
 </resources>
