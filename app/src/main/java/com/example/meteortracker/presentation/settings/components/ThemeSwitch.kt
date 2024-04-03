@@ -36,7 +36,7 @@ fun ThemeSwitch(modifier: Modifier = Modifier) {
             (context as? Activity)?.recreate()
         },
         thumbContent = {
-            Icon(imageVector = modeIcon, contentDescription = null)
+            Icon(imageVector = modeIcon, contentDescription = "Theme Switch")
         },
         colors = SwitchDefaults.colors(
             uncheckedIconColor = colorScheme.onPrimary,

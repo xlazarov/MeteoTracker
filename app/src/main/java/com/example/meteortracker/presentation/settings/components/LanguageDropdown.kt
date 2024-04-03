@@ -1,5 +1,6 @@
 package com.example.meteortracker.presentation.settings.components
 
+import android.app.Activity
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.KeyboardArrowDown
@@ -22,10 +23,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import com.example.meteortracker.util.LocaleManager
-import com.example.meteortracker.util.restartActivity
 
 /**
- * Dropdown for language selection. Changes apply immediately by [restartActivity].
+ * Dropdown for language selection.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -54,7 +54,12 @@ fun LanguageDropdown(modifier: Modifier = Modifier) {
                 focusedContainerColor = Color.Transparent
             ),
             modifier = Modifier.menuAnchor(),
-            trailingIcon = { Icon(imageVector = icon, contentDescription = null) }
+            trailingIcon = {
+                Icon(
+                    imageVector = icon,
+                    contentDescription = if (isExpanded) "Collapse" else "Expand"
+                )
+            }
         )
         ExposedDropdownMenu(
             expanded = isExpanded,
@@ -67,7 +72,7 @@ fun LanguageDropdown(modifier: Modifier = Modifier) {
                         selectedLanguage = language
                         isExpanded = false
                         LocaleManager.set(context, language)
-                        restartActivity(context)
+                        (context as? Activity)?.recreate()
                     }
                 )
             }

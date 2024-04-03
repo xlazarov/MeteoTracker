@@ -2,7 +2,6 @@ package com.example.meteortracker.presentation.common.components.navigation
 
 import androidx.compose.material3.DrawerState
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.NavigationDrawerItem
 import androidx.compose.material3.NavigationDrawerItemDefaults
 import androidx.compose.material3.Text
@@ -26,16 +25,16 @@ fun NavigationDrawerItem(
 ) {
     NavigationDrawerItem(
         label = { Text(text = screen.getName()) },
-        selected = false,
+        selected = navController.currentDestination?.navigatorName == screen.name,
         icon = {
             Icon(
                 imageVector = screen.getIcon(),
-                contentDescription = null
+                contentDescription = "Screen Icon"
             )
         },
         colors = NavigationDrawerItemDefaults.colors(
-            unselectedIconColor = colorScheme.primary,
-            unselectedTextColor = colorScheme.primary
+          //  unselectedIconColor = colorScheme.primary,
+          //  unselectedTextColor = colorScheme.primary
         ),
         onClick = {
             navController.navigate(screen.name)

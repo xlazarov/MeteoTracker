@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Menu
 import androidx.compose.material3.DrawerState
@@ -66,7 +65,6 @@ fun TopAppBar(
             Icon(
                 imageVector = Icons.Rounded.Menu,
                 contentDescription = null,
-                modifier = Modifier.size(28.dp),
                 tint = colorScheme.onPrimary
             )
         }
@@ -78,7 +76,7 @@ fun TopAppBar(
             Image(
                 painter = painterResource(id = R.drawable.logo),
                 contentDescription = "logo",
-                modifier = Modifier.scale(1.8f),
+                modifier = Modifier.scale(1.5f),
                 colorFilter = ColorFilter.tint(colorScheme.onPrimary)
             )
         }

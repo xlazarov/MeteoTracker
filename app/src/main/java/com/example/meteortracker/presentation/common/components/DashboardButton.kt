@@ -48,7 +48,7 @@ fun DashboardButton(
         ) {
             Image(
                 painter = painterResource(id = imageId),
-                contentDescription = null,
+                contentDescription = "Screen Image",
                 modifier = Modifier.size(80.dp),
                 colorFilter = ColorFilter.tint(color)
             )

@@ -42,7 +42,7 @@ fun NavigationDrawer(
         ) {
             Icon(
                 imageVector = Icons.Rounded.Close,
-                contentDescription = null,
+                contentDescription = "Close drawer",
                 tint = colorScheme.primary
             )
         }

@@ -66,7 +66,7 @@ fun SearchBar(
             leadingIcon = {
                 Icon(
                     imageVector = Icons.Rounded.Search,
-                    contentDescription = null
+                    contentDescription = "Search"
                 )
             },
             singleLine = true,
@@ -77,7 +77,7 @@ fun SearchBar(
                 ) {
                     Icon(
                         imageVector = Icons.Rounded.FilterAlt,
-                        contentDescription = null
+                        contentDescription = "Filter Button"
                     )
                 }
             },

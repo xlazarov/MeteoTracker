@@ -25,7 +25,7 @@ fun SettingRow(icon: ImageVector, title: String, content: @Composable () -> Unit
         Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
             Icon(
                 imageVector = icon,
-                contentDescription = null,
+                contentDescription = "Setting Icon",
                 tint = MaterialTheme.colorScheme.primary
             )
             Text(
