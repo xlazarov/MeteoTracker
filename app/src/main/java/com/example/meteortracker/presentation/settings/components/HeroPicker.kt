@@ -22,7 +22,7 @@ fun HeroPicker() {
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         items(ThemeManager.getHeroOptions(currentTheme)) { hero ->
-            ImageCard(
+            HeroImageCard(
                 imageResId = hero,
                 isSelected = hero == currentHero,
                 onImageSelected = {

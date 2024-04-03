@@ -14,7 +14,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun ImageCard(imageResId: Int, isSelected: Boolean, onImageSelected: (Int) -> Unit) {
+fun HeroImageCard(imageResId: Int, isSelected: Boolean, onImageSelected: (Int) -> Unit) {
     Card(
         modifier = Modifier.height(100.dp)
             .clickable { onImageSelected(imageResId) },
@@ -23,7 +23,7 @@ fun ImageCard(imageResId: Int, isSelected: Boolean, onImageSelected: (Int) -> Un
     ) {
         Image(
             painter = painterResource(id = imageResId),
-            contentDescription = null,
+            contentDescription = "Hero Option",
             contentScale = ContentScale.Crop
         )
     }
