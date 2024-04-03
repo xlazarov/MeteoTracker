@@ -76,7 +76,7 @@ fun TopAppBar(
             Image(
                 painter = painterResource(id = R.drawable.logo),
                 contentDescription = "logo",
-                modifier = Modifier.scale(1.5f),
+                modifier = Modifier.scale(1.8f),
                 colorFilter = ColorFilter.tint(colorScheme.onPrimary)
             )
         }
