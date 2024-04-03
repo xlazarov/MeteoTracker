@@ -20,7 +20,7 @@
         tools:targetApi="tiramisu"
         >
         <activity
-            android:name=".presentation.MainActivity"
+            android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.MeteorTracker">
             <intent-filter>

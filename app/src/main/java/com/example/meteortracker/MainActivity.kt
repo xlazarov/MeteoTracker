@@ -1,4 +1,4 @@
-package com.example.meteortracker.presentation
+package com.example.meteortracker
 
 import android.content.Context
 import android.os.Bundle
