@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme.colorScheme
@@ -16,6 +17,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -27,6 +29,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.example.meteortracker.R
 import com.example.meteortracker.data.MeteoriteFilter
+import com.example.meteortracker.presentation.dataList.components.filter.isCorrectYearRange
 
 /**
  * Allows to set the [filter] with year range after validation. Displays a toast for invalid ranges.
@@ -42,7 +45,23 @@ fun YearRangeSelector(
     var yearTo by remember { mutableStateOf(filter.yearTo ?: "2024") }
 
     val context = LocalContext.current
-    val wrongRange = stringResource(id = R.string.wrong_year_range)
+    val wrongRangeToast = stringResource(id = R.string.wrong_year_range)
+    var wrongRange by rememberSaveable {
+        mutableStateOf(false)
+    }
+
+    val onRangeSelected = {
+        if (isCorrectYearRange(yearFrom, yearTo)) {
+            onClick(yearFrom, yearTo)
+        } else {
+            Toast.makeText(
+                context,
+                wrongRangeToast,
+                Toast.LENGTH_LONG
+            ).show()
+            wrongRange = true
+        }
+    }
 
     Row(
         modifier = modifier
@@ -52,43 +71,46 @@ fun YearRangeSelector(
     ) {
         TextField(
             value = yearFrom,
-            onValueChange = { yearFrom = it },
+            onValueChange = {
+                yearFrom = it
+                wrongRange = false
+            },
             label = { Text(stringResource(id = R.string.year_from)) },
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Number,
-                imeAction = ImeAction.Done
+                imeAction = ImeAction.Next
             ),
             modifier = Modifier.weight(0.4f),
             colors = TextFieldDefaults.colors(
                 focusedContainerColor = Color.Transparent,
                 unfocusedContainerColor = Color.Transparent
-            )
+            ),
+            isError = wrongRange
         )
         TextField(
             value = yearTo,
-            onValueChange = { yearTo = it },
+            onValueChange = {
+                yearTo = it
+                wrongRange = false
+            },
             label = { Text(stringResource(id = R.string.year_to)) },
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Number,
                 imeAction = ImeAction.Done
             ),
+            keyboardActions = KeyboardActions(
+                onDone = { onRangeSelected() }
+            ),
             modifier = Modifier.weight(0.4f),
             colors = TextFieldDefaults.colors(
                 focusedContainerColor = Color.Transparent,
                 unfocusedContainerColor = Color.Transparent
-            )
+            ),
+            isError = wrongRange
         )
         Spacer(modifier = Modifier.width(16.dp))
         Button(
-            onClick = {
-                if ((yearFrom.toIntOrNull() ?: 0) > (yearTo.toIntOrNull() ?: 0)) {
-                    Toast.makeText(
-                        context,
-                        wrongRange,
-                        Toast.LENGTH_LONG
-                    ).show()
-                } else onClick(yearFrom, yearTo)
-            }
+            onClick = onRangeSelected
         ) {
             Text(stringResource(id = R.string.confirm))
         }
