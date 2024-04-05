@@ -45,7 +45,7 @@
     <string name="home_background">Pozadí domovské obrazovky</string>
     <string name="map_text">Vizualizujte rozložení přistání meteoritů na interaktivní globální mapě. Přibližte a prozkoumejte místa dopadu.</string>
     <string name="stats_text">Prozkoumejte vizuální reprezentace dat a odhalte frekvenci a klasifikaci přistání meteoritů v průběhu času.</string>
-    <string name="wrong_year_range">Rok „Od“ nemůže být větší než rok „Do“.</string>
+    <string name="wrong_year_range">Hodnota „Od“ nemůže být větší než hodnota „Do“.</string>
     <string name="per_year">Přistání meteoritů\nza rok</string>
     <string name="pie_chart">Koláčový graf</string>
     <string name="line_chart">Spojnicový graf</string>
