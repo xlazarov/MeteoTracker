@@ -54,11 +54,18 @@ fun SearchBar(
             value = text,
             onValueChange = { text = it },
             keyboardOptions = KeyboardOptions.Default.copy(
-                imeAction = ImeAction.Done
+                imeAction = ImeAction.Search
             ),
             keyboardActions = KeyboardActions(
-                onDone = {
-                    viewModel.setFilter(filter.copy(nameQuery = text))
+                onSearch = {
+                    viewModel.setFilter(
+                        filter.copy(
+                            nameQuery = text.replaceFirstChar {
+                                it.uppercaseChar()
+                            }
+                        )
+                    )
+
                     viewModel.fetchByFilter()
                 }
             ),
