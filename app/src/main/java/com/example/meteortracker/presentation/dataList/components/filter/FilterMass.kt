@@ -37,7 +37,7 @@ fun FilterMass(
                 massMin = it
                 viewModel.setFilter(filter.copy(massMin = it))
             },
-            label = { Text("Mass From") },
+            label = { Text(stringResource(id = R.string.mass_from)) },
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Number
             ),
@@ -50,7 +50,7 @@ fun FilterMass(
                 massMax = it
                 viewModel.setFilter(filter.copy(massMax = it))
             },
-            label = { Text("Mass To") },
+            label = { Text(stringResource(id = R.string.mass_to)) },
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Number
             ),

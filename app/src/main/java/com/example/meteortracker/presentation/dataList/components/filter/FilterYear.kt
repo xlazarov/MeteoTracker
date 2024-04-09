@@ -37,7 +37,7 @@ fun FilterYear(
                 yearFrom = it
                 viewModel.setFilter(filter.copy(yearFrom = it))
             },
-            label = { Text("Year From") },
+            label = { Text(stringResource(id = R.string.year_from)) },
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Number
             ),
@@ -49,7 +49,7 @@ fun FilterYear(
                 yearTo = it
                 viewModel.setFilter(filter.copy(yearTo = it))
             },
-            label = { Text("Year To") },
+            label = { Text(stringResource(id = R.string.year_to)) },
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Number
             ),
