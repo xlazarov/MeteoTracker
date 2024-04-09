@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import com.example.meteortracker.presentation.common.components.navigation.NavGraph
 import com.example.meteortracker.ui.theme.MeteorTrackerTheme
 import com.example.meteortracker.util.LocaleManager
+import com.example.meteortracker.util.NetworkUtil
 import com.example.meteortracker.util.ThemeManager
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -19,11 +20,23 @@ class MainActivity : ComponentActivity() {
     override fun attachBaseContext(base: Context) {
         super.attachBaseContext(LocaleManager.update(base))
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            val isDarkTheme = ThemeManager.getTheme(this)
+        setUpApp()
+    }
 
+    private fun setUpApp() {
+        if (!NetworkUtil.isInternetAvailable(this)) {
+            NetworkUtil.showNoNetworkDialog(this)
+        } else {
+            setUpUI()
+        }
+    }
+
+    private fun setUpUI() {
+        val isDarkTheme = ThemeManager.getTheme(this)
+        setContent {
             MeteorTrackerTheme(darkTheme = isDarkTheme) {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
