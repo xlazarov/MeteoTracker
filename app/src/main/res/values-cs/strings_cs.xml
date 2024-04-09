@@ -49,4 +49,7 @@
     <string name="per_year">Přistání meteoritů\nza rok</string>
     <string name="pie_chart">Koláčový graf</string>
     <string name="line_chart">Spojnicový graf</string>
+    <string name="no_network">Žádné síťové připojení</string>
+    <string name="retry">Zkusit znovu</string>
+    <string name="check_connection">Zkontrolujte prosím připojení k síti a zkuste to znovu.</string>
 </resources>

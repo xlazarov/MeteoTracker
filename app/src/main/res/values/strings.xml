@@ -49,4 +49,7 @@
     <string name="per_year">Meteorite Landings\nper Year</string>
     <string name="pie_chart">Pie Chart</string>
     <string name="line_chart">Line Chart</string>
+    <string name="no_network">No Network Connection</string>
+    <string name="check_connection">Please check your network connection and try again.</string>
+    <string name="retry">Retry</string>
 </resources>
