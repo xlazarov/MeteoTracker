@@ -5,8 +5,9 @@ import android.app.AlertDialog
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
+import javax.inject.Inject
 
-object NetworkUtil {
+class NetworkUtil @Inject constructor() {
 
     fun isInternetAvailable(context: Context): Boolean {
         val connectivityManager =

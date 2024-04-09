@@ -14,9 +14,14 @@ import com.example.meteortracker.util.LocaleManager
 import com.example.meteortracker.util.NetworkUtil
 import com.example.meteortracker.util.ThemeManager
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+
+    @Inject
+    lateinit var networkUtil: NetworkUtil
+
     override fun attachBaseContext(base: Context) {
         super.attachBaseContext(LocaleManager.update(base))
     }
@@ -27,8 +32,8 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun setUpApp() {
-        if (!NetworkUtil.isInternetAvailable(this)) {
-            NetworkUtil.showNoNetworkDialog(this)
+        if (!networkUtil.isInternetAvailable(this)) {
+            networkUtil.showNoNetworkDialog(this)
         } else {
             setUpUI()
         }
