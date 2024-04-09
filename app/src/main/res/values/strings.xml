@@ -52,4 +52,6 @@
     <string name="no_network">No Network Connection</string>
     <string name="check_connection">Please check your network connection and try again.</string>
     <string name="retry">Retry</string>
+    <string name="mass_to">Mass To</string>
+    <string name="mass_from">Mass From</string>
 </resources>

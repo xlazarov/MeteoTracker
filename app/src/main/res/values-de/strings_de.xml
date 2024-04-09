@@ -52,4 +52,6 @@
     <string name="no_network">Keine Netzwerk Verbindung</string>
     <string name="retry">Wiederholen</string>
     <string name="check_connection">Bitte überprüfen Sie Ihre Netzwerkverbindung und versuchen Sie es erneut.</string>
+    <string name="mass_to">Masse bis</string>
+    <string name="mass_from">Masse von</string>
 </resources>

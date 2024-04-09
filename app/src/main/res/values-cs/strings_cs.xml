@@ -52,4 +52,6 @@
     <string name="no_network">Žádné síťové připojení</string>
     <string name="retry">Zkusit znovu</string>
     <string name="check_connection">Zkontrolujte prosím připojení k síti a zkuste to znovu.</string>
+    <string name="mass_to">Hmotnost Do</string>
+    <string name="mass_from">Hmotnost Od</string>
 </resources>
