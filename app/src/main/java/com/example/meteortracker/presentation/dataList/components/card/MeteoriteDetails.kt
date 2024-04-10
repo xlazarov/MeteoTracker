@@ -4,11 +4,11 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MaterialTheme.colorScheme
+import androidx.compose.material3.MaterialTheme.typography
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.meteortracker.R
@@ -22,9 +22,8 @@ import com.example.meteortracker.util.formatNumber
 @Composable
 fun MeteoriteDetails(meteorite: Meteorite) {
     HorizontalDivider(
-        modifier = Modifier
-            .padding(vertical = 16.dp)
-            .alpha(0.7f)
+        modifier = Modifier.padding(vertical = 16.dp),
+        color = colorScheme.onSecondaryContainer.copy(0.1f)
     )
 
     MeteoriteDetail(
@@ -55,9 +54,8 @@ fun MeteoriteDetails(meteorite: Meteorite) {
         value = meteorite.year.substring(0, 4)
     )
     HorizontalDivider(
-        modifier = Modifier
-            .padding(vertical = 16.dp)
-            .alpha(0.7f)
+        modifier = Modifier.padding(vertical = 16.dp),
+        color = colorScheme.onSecondaryContainer.copy(0.1f)
     )
 
     MeteoriteDetail(
@@ -85,14 +83,14 @@ fun MeteoriteDetail(
     Row(modifier = Modifier.fillMaxWidth()) {
         Text(
             text = "$description: ",
-            style = MaterialTheme.typography.bodyMedium,
-            color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.7f),
+            style = typography.bodyMedium,
+            color = colorScheme.onPrimaryContainer.copy(alpha = 0.7f),
             modifier = Modifier.weight(0.5f)
         )
         Text(
             text = value,
-            style = MaterialTheme.typography.bodyMedium,
-            color = MaterialTheme.colorScheme.onPrimaryContainer,
+            style = typography.bodyMedium,
+            color = colorScheme.onPrimaryContainer,
             modifier = Modifier.weight(0.5f)
         )
     }
