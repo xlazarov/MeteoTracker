@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.window.DialogProperties
 import com.example.meteortracker.data.Meteorite
 import com.example.meteortracker.presentation.map.components.MapView
 
@@ -21,13 +22,18 @@ import com.example.meteortracker.presentation.map.components.MapView
 fun LocationDialog(meteorite: Meteorite, onClose: () -> Unit) {
     BasicAlertDialog(
         onDismissRequest = onClose,
+        properties = DialogProperties(
+            usePlatformDefaultWidth = false,
+            dismissOnClickOutside = true,
+            dismissOnBackPress = true
+        ),
         modifier = Modifier
-            .fillMaxWidth()
-            .fillMaxHeight(0.5f),
+            .fillMaxWidth(0.9f)
+            .fillMaxHeight(0.6f)
     ) {
         MapView(
             meteorites = listOf(meteorite),
-            modifier = Modifier.clip(RoundedCornerShape(4.dp))
+            modifier = Modifier.clip(RoundedCornerShape(25.dp))
         )
     }
 }
